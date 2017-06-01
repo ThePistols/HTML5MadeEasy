@@ -1,3 +1,10 @@
 ﻿@{ 
     ViewBag.Title = "Section 1";
 }
+
+@if (Request.IsAuthenticated)
+{
+    <p>Welcome to Section 1 site @User.Identity.Name</p>
+
+    <p>IT WORKS!!!</p>
+}
