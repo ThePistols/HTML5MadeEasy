@@ -52,12 +52,25 @@ namespace WebApp
                 }
             }
 
+            // get a list of existing application roles and delete them
+            List<IdentityRole> roles2 = roleManager.Roles.ToList();
+            if(roles2 != null)
+            {
+                foreach(IdentityRole roleuser in roles2)
+                {
+                    roleManager.Delete(roleuser);
+                }
+            }
+
+
+
 
             // add new roles and users
 
             var roles = new List<IdentityRole> {
                 new IdentityRole { Name = "Admin" },
-                new IdentityRole { Name = "User" }
+                new IdentityRole { Name = "User" },
+                new IdentityRole { Name = "Teacher" }
             };
 
             // online guid generator for obtaining guid values - https://guidgenerator.com/online-guid-generator.aspx
