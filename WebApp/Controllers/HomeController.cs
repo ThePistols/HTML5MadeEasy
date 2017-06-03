@@ -19,6 +19,16 @@ namespace WebApp.Controllers
             return View("Section1/index");
         }
 
+        public ActionResult Section2Index()
+        {
+            return View("Section2/index");
+        }
+
+        public ActionResult Section3Index()
+        {
+            return View("Section3/index");
+        }
+
 
     }
 }
