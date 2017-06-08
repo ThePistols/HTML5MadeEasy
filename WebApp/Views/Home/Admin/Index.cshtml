@@ -1,0 +1,10 @@
+﻿@{ 
+    ViewBag.Title = "Admin";
+}
+
+@if (Request.IsAuthenticated)
+{
+    <p>Welcome to Admin page @User.Identity.Name</p>
+
+    <p>THIS SHOULD BE ADMIN PAGE</p>
+}

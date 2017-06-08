@@ -29,6 +29,12 @@ namespace WebApp.Controllers
             return View("Section3/index");
         }
 
+        public ActionResult AdminIndex()
+        {
+            return View("Admin/index");
+        }
+
+
 
     }
 }

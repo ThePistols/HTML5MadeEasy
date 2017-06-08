@@ -234,6 +234,7 @@
     <Content Include="Views\Account\CreateNewUser.cshtml" />
     <Content Include="Views\Home\Section2\Index.cshtml" />
     <Content Include="Views\Home\Section3\Index.cshtml" />
+    <Content Include="Views\Home\Admin\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
