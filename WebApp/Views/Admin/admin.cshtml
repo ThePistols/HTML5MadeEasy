@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+
+@if (Request.IsAuthenticated)
+{
+    <p>Welcome to Admin site @User.Identity.Name</p>
+
+    <p>ADMIN PAGE?</p>
+
+    <p>@ViewBag.Test</p>
+
+    if (ViewBag.UserList != null)
+    {
+    for (int i = 0; i < ViewBag.UserList.Count; i++)
+    {
+        @ViewBag.UserList[i]<br />
+    }
+    }
+
+
+    <p>
+    <a href="@Url.Action("Testing", null, new { area = string.Empty, controller = "Admin" }, Request.Url.Scheme)">
+        <span>Delete</span>
+    </a>
+    </p>
+}
