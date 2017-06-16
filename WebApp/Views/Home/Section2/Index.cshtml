@@ -5,7 +5,20 @@
 @if (Request.IsAuthenticated)
 {
     <p>Welcome to the Embedding content setion @User.Identity.Name</p>
-    <p>The content created in here relates to embedding files and images into an HTML webpage.</p>
-    <img src="~/Images/Photo1.png"/>
-    <img src="~/Images/Photo1.png" />
+    <p><b>Learn how to embed files and images into a basic html page.</b></p>
+    <img src="~/Images/Photo1.png" alt="Embedding Content" align="right" style="width:350px;height:250px;"/>
+
+    <p><b>Embedding an image into a html webpage</b></p>
+    <p>Firstly you will need to know the syntax behind the HTML image.
+    <br />
+        In HTML, images are defined with the <img> tag.
+    <br />
+        The <img> tag is empty, it contains attributes only, and does not have a closing tag.
+    <br />
+        The src attribute specifies the URL (web address) of the image:
+    <p>Be sure to add <></p>
+        <p>img src="url" alt="some_text" style="width:width;height:height;"</p>
+    
+    </p>
+  
 }
