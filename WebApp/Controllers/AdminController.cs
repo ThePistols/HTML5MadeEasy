@@ -21,7 +21,7 @@ namespace WebApp.Controllers
             return View();
         }
 
-        string test = "HELLO";
+        string teststring = "HELLO";
 
 
         private void seedDatabase()
@@ -40,14 +40,19 @@ namespace WebApp.Controllers
             if (currentUsers != null)
             {
                 var temp = new List<String>();
-                temp.Add("START");
+                var temp2 = new List<String>();
+            //    temp.Add("START");
                 foreach (ApplicationUser currentUser in currentUsers)
                 {
                     temp.Add(currentUser.UserName);
-                  //  userManager.Delete(currentUser);
+                  //  temp2.Add(roleManager.FindById(currentUser.Id).ToString());
+                  //  roleManager.FindById(currentUser.Id).ToString();
+
                 }
-                temp.Add("END");
+            //    temp.Add("END");
                 ViewBag.UserList = temp;
+                ViewBag.RoleList = temp2;
+               // ViewBag.UserRole = Userrole;
             }
 
             // get a list of existing application roles
@@ -56,6 +61,7 @@ namespace WebApp.Controllers
             {
                 foreach (IdentityRole roleuser in roles2)
                 {
+                  //  roleManager.FindById
                  //   roleManager.Delete(roleuser);
                 }
             }
@@ -64,16 +70,16 @@ namespace WebApp.Controllers
 
         public ActionResult Testing()
         {
-            test = "NO LONGER HELLO :P";
+            teststring = "NO LONGER HELLO :P";
             seedDatabase();
-            ViewBag.Test = test;
+            ViewBag.teststring = teststring;
             return View("admin");
         }
 
 
         public ActionResult AdminIndex()
         {
-            ViewBag.Test = test;
+            ViewBag.teststring = teststring;
             return View("admin");
         }
 
