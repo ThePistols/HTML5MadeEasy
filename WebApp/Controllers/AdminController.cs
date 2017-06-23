@@ -24,7 +24,7 @@ namespace WebApp.Controllers
         string teststring = "HELLO";
 
 
-        private void seedDatabase()
+        private void getUserRoles()
         {
             var roleManager = new RoleManager<IdentityRole>(
                 new RoleStore<IdentityRole>(new ApplicationDbContext())
@@ -37,43 +37,45 @@ namespace WebApp.Controllers
             // get a list of existing application users
 
             List<ApplicationUser> currentUsers = userManager.Users.ToList();
+            List<IdentityRole> roles2 = roleManager.Roles.ToList();
             if (currentUsers != null)
             {
-                var temp = new List<String>();
-                var temp2 = new List<String>();
-            //    temp.Add("START");
+                var USER = new List<String>();
+                var USERid = new List<String>();
+                var UserROLES = new List<String>();
+
                 foreach (ApplicationUser currentUser in currentUsers)
                 {
-                    temp.Add(currentUser.UserName);
-                  //  temp2.Add(roleManager.FindById(currentUser.Id).ToString());
-                  //  roleManager.FindById(currentUser.Id).ToString();
+                    USER.Add(currentUser.UserName);
+                    USERid.Add(currentUser.Id);
 
-                }
-            //    temp.Add("END");
-                ViewBag.UserList = temp;
-                ViewBag.RoleList = temp2;
-               // ViewBag.UserRole = Userrole;
-            }
+                    var currentUserRoles = currentUser.Roles.ToList();
 
-            // get a list of existing application roles
-            List<IdentityRole> roles2 = roleManager.Roles.ToList();
-            if (roles2 != null)
-            {
-                foreach (IdentityRole roleuser in roles2)
-                {
-                  //  roleManager.FindById
-                 //   roleManager.Delete(roleuser);
+                    foreach (IdentityRole roleuser in roles2)
+                    {
+                        for (int i = 0; i < currentUserRoles.Count; i++)
+                        {
+                            if (roleuser.Id == currentUserRoles[i].RoleId)
+                            {
+                                UserROLES.Add(roleuser.Name);
+                            }
+                        }
+                    }
                 }
-            }
+                ViewBag.user = USER;
+                ViewBag.userID = USERid;
+                ViewBag.userROLE = UserROLES;
+            }           
+
 
         }
 
-        public ActionResult Testing()
+        public ActionResult UserRoles()
         {
             teststring = "NO LONGER HELLO :P";
-            seedDatabase();
+            getUserRoles();
             ViewBag.teststring = teststring;
-            return View("admin");
+            return View("editroles");
         }
 
 

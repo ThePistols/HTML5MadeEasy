@@ -96,12 +96,14 @@ namespace WebApp
 
             var admin = userManager.FindByName("Jamie");
             userManager.AddToRole(admin.Id, "Admin");
+            userManager.RemoveFromRole(admin.Id, "User");
 
             var User = userManager.FindByName("Regan");
             userManager.AddToRole(User.Id, "User");
 
             var teacher = userManager.FindByName("Ben");
             userManager.AddToRole(teacher.Id, "teacher");
+            userManager.RemoveFromRole(teacher.Id, "User");
         }
 
     }

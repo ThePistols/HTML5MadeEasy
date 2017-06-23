@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "editroles";
+}
+
+@if (Request.IsAuthenticated)
+{
+    <p>Welcome to the Edit Roles page @User.Identity.Name</p>
+
+    <p>ADMIN PAGE</p>
+
+
+    //  <p>@ViewBag.RoleList</p>
+
+
+    <br />
+    <br />
+    <p>USERS</p>
+    <br />
+    <br />
+    for (int i = 0; i < ViewBag.User.Count; i++)
+    {
+        <br />
+        @ViewBag.user[i]
+        <br />
+//        @ViewBag.userID[i]
+//        <br />
+        @ViewBag.userROLE[i]
+        <br />
+    }
+    <br />
+    <br />
+
+
+
+}
