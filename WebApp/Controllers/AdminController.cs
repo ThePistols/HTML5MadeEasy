@@ -78,6 +78,14 @@ namespace WebApp.Controllers
             return View("editroles");
         }
 
+        public ActionResult testing(string userid)
+        {
+            teststring = userid;
+            ViewBag.teststring = teststring;
+            getUserRoles();
+            return View("editroles");
+        }
+
 
         public ActionResult AdminIndex()
         {
