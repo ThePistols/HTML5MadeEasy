@@ -77,9 +77,9 @@ namespace WebApp
 
             var users = new List<ApplicationUser>
             {
-                new ApplicationUser{ UserName="mark", Email="mark@mark.com", Id="b2cfcc69-1959-4913-ae78-070d5e60af05" },
-                new ApplicationUser{ UserName="dave", Email="dave@dave.com", Id="8b7efdb4-e0c8-40d0-ac17-4ab34c9da983" },
-                new ApplicationUser{ UserName="sarah", Email="sarah@sarah.com", Id="92f20888-702a-4b64-aad0-ffbd32462e2e" }
+                new ApplicationUser{ UserName="Jamie", Email="jamie@gmail.com", Id="b2cfcc69-1959-4913-ae78-070d5e60af05" },
+                new ApplicationUser{ UserName="Ben", Email="bweake@hotmail.com", Id="8b7efdb4-e0c8-40d0-ac17-4ab34c9da983" },
+                new ApplicationUser{ UserName="Regan", Email="sarah@sarah.com", Id="92f20888-702a-4b64-aad0-ffbd32462e2e" }
             };
 
             foreach (IdentityRole role in roles)
@@ -94,9 +94,14 @@ namespace WebApp
                 if (result.Succeeded) userManager.AddToRole(user.Id, "User");
             }
 
-            var admin = userManager.FindByName("mark");
+            var admin = userManager.FindByName("Jamie");
             userManager.AddToRole(admin.Id, "Admin");
 
+            var User = userManager.FindByName("Regan");
+            userManager.AddToRole(User.Id, "User");
+
+            var teacher = userManager.FindByName("Ben");
+            userManager.AddToRole(teacher.Id, "teacher");
         }
 
     }
