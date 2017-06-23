@@ -74,9 +74,24 @@
                         {
                             <li>
                                 @Html.ActionLink("Admin", "AdminIndex", "Admin")
+                                
+
+                            </li>
+                            <li>
+                                @Html.ActionLink("Teacher", "TeacherIndex", "Teacher")
                             </li>
                         }
                     }
+                    @if (Request.IsAuthenticated)
+                    {
+                        if (User.IsInRole("Teacher"))
+                        {
+                            <li>
+                                @Html.ActionLink("Teacher", "TeacherIndex", "Teacher")
+                            </li>
+                        }
+                    }
+
                 </ul>                
             <!-- /.navbar-collapse -->
         </div>
