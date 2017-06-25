@@ -24,10 +24,29 @@
         <br />
         @ViewBag.userROLE[i]
         <br />
-        @Html.ActionLink("Edit User Role", "testing", "Admin", new { userid = ViewBag.userID[i] }, null)
-        <br />
+           var messagelist = new List<String>();
+            messagelist.Add(ViewBag.userID[i]);
+            messagelist.Add("This is my message to you");
+            messagelist.Add(ViewBag.userID[i]);
+
+            ViewBag.messagesend = messagelist;
+            
+
+            @Html.ActionLink("Edit User Role", "testing", "Admin", new { message = Json.Encode(ViewBag.messagesend) }, null)
+            <br />
         }
     <br />
     <br />
+        if (ViewBag.message != null)
+        {
+            for (int i = 0; i < ViewBag.message.Count; i++)
+            {
+            <br />
+            <br />
+            @ViewBag.message[i]
+            <br />
+            <br />
+            }
+        }
     }
 }

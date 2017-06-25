@@ -78,10 +78,12 @@ namespace WebApp.Controllers
             return View("editroles");
         }
 
-        public ActionResult testing(string userid)
+        public ActionResult testing(String message)
         {
-            teststring = userid;
-            ViewBag.teststring = teststring;
+
+            List<String> result = System.Web.Helpers.Json.Decode<List<String>>(message);
+            ViewBag.message = result;
+
             getUserRoles();
             return View("editroles");
         }
