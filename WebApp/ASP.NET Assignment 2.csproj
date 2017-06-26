@@ -241,6 +241,7 @@
     <Content Include="Views\Admin\admin.cshtml" />
     <Content Include="Views\Teacher\Teacher.cshtml" />
     <Content Include="Views\Admin\editroles.cshtml" />
+    <Content Include="Views\Admin\editrolestest.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

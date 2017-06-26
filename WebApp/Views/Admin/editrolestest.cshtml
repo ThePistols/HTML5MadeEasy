@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "editroles";
+    ViewBag.Title = "editrolestest";
 }
 
 @if (Request.IsAuthenticated)
@@ -12,9 +12,9 @@
             <br />
             <p>User:    @ViewBag.user[i]</p>
             <p>Role:    @ViewBag.userROLE[i] </p>
-            using (Html.BeginForm("ProcessRoleChange", "Admin", new { userID = ViewBag.userID[i], currentrole = ViewBag.userROLE[i] }))
+            using (Html.BeginForm("ProcessRoleChange2", "Admin", new { userID = ViewBag.userID[i], currentrole = ViewBag.userROLE[i] }))
             {
-                @Html.DropDownList("selectedrole",new List<SelectListItem>
+                @Html.DropDownList("selectedrole2", new List<SelectListItem>
            {
                new SelectListItem {Text="Select new Role", Value=ViewBag.userROLE[i] },
                new SelectListItem {Text="User", Value="User" },
