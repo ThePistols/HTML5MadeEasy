@@ -15,14 +15,6 @@ namespace WebApp.Controllers
 {
     public class AdminController : Controller
     {
-        // GET: Admin
-        public ActionResult Index()
-        {
-            return View();
-        }
-
-        string teststring = "HELLO";
-
 
         private void getUserRoles()
         {
@@ -35,6 +27,7 @@ namespace WebApp.Controllers
             );
 
             // get a list of existing application users
+
 
             List<ApplicationUser> currentUsers = userManager.Users.ToList();
             List<IdentityRole> roles2 = roleManager.Roles.ToList();
@@ -49,50 +42,73 @@ namespace WebApp.Controllers
                     USER.Add(currentUser.UserName);
                     USERid.Add(currentUser.Id);
 
-                    var currentUserRoles = currentUser.Roles.ToList();
+                   var temp = userManager.GetRoles(currentUser.Id);
 
-                    foreach (IdentityRole roleuser in roles2)
+                    for (int i = 0; i < temp.Count; i++)
                     {
-                        for (int i = 0; i < currentUserRoles.Count; i++)
-                        {
-                            if (roleuser.Id == currentUserRoles[i].RoleId)
-                            {
-                                UserROLES.Add(roleuser.Name);
-                            }
-                        }
+                        UserROLES.Add(temp[i]);
                     }
                 }
                 ViewBag.user = USER;
                 ViewBag.userID = USERid;
                 ViewBag.userROLE = UserROLES;
             }           
+        }
 
+        public void changerole(string userID, string currentRole, string newRole)
+        {
+            var roleManager = new RoleManager<IdentityRole>(
+                new RoleStore<IdentityRole>(new ApplicationDbContext())
+            );
 
+            var userManager = new UserManager<ApplicationUser>(
+                new UserStore<ApplicationUser>(new ApplicationDbContext())
+            );
+
+            userManager.RemoveFromRole(userID, currentRole);
+            userManager.AddToRole(userID, newRole);
         }
 
         public ActionResult UserRoles()
         {
-            teststring = "NO LONGER HELLO :P";
             getUserRoles();
-            ViewBag.teststring = teststring;
+            return View("editroles");
+        }
+        [HttpPost]
+        public ActionResult ProcessRoleChange(string userID, string currentrole, string selectedrole)
+        {
+            changerole(userID, currentrole, selectedrole);
+            getUserRoles();
+            return View("editrolestest");
+        }
+
+        [HttpPost]
+        public ActionResult ProcessRoleChange2(string userID, string currentrole, string selectedrole2)
+        {
+            changerole(userID, currentrole, selectedrole2);
+            getUserRoles();
             return View("editroles");
         }
 
+
+
+
+        public ActionResult AdminIndex()
+        {
+            return View("admin");
+        }
+
+
+
+
+
         public ActionResult testing(String message)
         {
-
             List<String> result = System.Web.Helpers.Json.Decode<List<String>>(message);
             ViewBag.message = result;
 
             getUserRoles();
             return View("editroles");
-        }
-
-
-        public ActionResult AdminIndex()
-        {
-            ViewBag.teststring = teststring;
-            return View("admin");
         }
 
 
