@@ -6,50 +6,47 @@
 {
     if (User.IsInRole("Admin"))
     {
-        <p>Welcome to the EDIT ROLES page @User.Identity.Name</p>
+    <p>Welcome to the Edit Roles page @User.Identity.Name</p>
+
+    <p>ADMIN PAGE</p>
+    <br />
+    <br />
+    <p>USERS</p>
+    <br />
+    <p>Test string: @ViewBag.teststring</p>
+    <br />
         for (int i = 0; i < ViewBag.User.Count; i++)
         {
-            <br />
-            <p>User:    @ViewBag.user[i]</p>
-            <p>Role:    @ViewBag.userROLE[i] </p>
-            using (Html.BeginForm("ProcessRoleChange", "Admin", new { userID = ViewBag.userID[i], currentrole = ViewBag.userROLE[i] }))
-            {
-                @Html.DropDownList("selectedrole",new List<SelectListItem>
-           {
-               new SelectListItem {Text="Select new Role", Value=ViewBag.userROLE[i] },
-               new SelectListItem {Text="User", Value="User" },
-               new SelectListItem {Text="Teacher", Value="Teacher" },
-               new SelectListItem {Text="Admin", Value="Admin" },
-           })
-                <br />
-                <input type="submit" value="Submit" />
-            }
-            //          @Html.ActionLink("Edit Role", "changerole", "Admin", new { }, null)
+        <br />
+        @ViewBag.user[i]
+        <br />
+        @ViewBag.userID[i]
+        <br />
+        @ViewBag.userROLE[i]
+        <br />
+           var messagelist = new List<String>();
+            messagelist.Add(ViewBag.userID[i]);
+            messagelist.Add("This is my message to you");
+            messagelist.Add(ViewBag.userID[i]);
 
-            //code to send string list to controller and back
-            //           var messagelist = new List<String>();
-            //            messagelist.Add(ViewBag.userID[i]);
-            //            messagelist.Add("This is my message to you");
-            //            messagelist.Add(ViewBag.userID[i]);
-            //
-            //            ViewBag.messagesend = messagelist;
-            //
-            //
-            //            @Html.ActionLink("Send String List", "testing", "Admin", new { message = Json.Encode(ViewBag.messagesend) }, null)
-            //            <br />
-            //        }
-            //    <br />
-            //    <br />
-            //        if (ViewBag.message != null)
-            //        {
-            //            for (int i = 0; i < ViewBag.message.Count; i++)
-            //            {
-            //            <br />
-            //            <br />
-            //            @ViewBag.message[i]
-            //            <br />
-            //            <br />
-            //            }
+            ViewBag.messagesend = messagelist;
+            
+
+            @Html.ActionLink("Edit User Role", "testing", "Admin", new { message = Json.Encode(ViewBag.messagesend) }, null)
+            <br />
+        }
+    <br />
+    <br />
+        if (ViewBag.message != null)
+        {
+            for (int i = 0; i < ViewBag.message.Count; i++)
+            {
+            <br />
+            <br />
+            @ViewBag.message[i]
+            <br />
+            <br />
+            }
         }
     }
 }

@@ -49,10 +49,6 @@ namespace WebApp
     }
 
 
-
-
-
-
     public class ApplicationSignInManager : SignInManager<ApplicationUser, string>
     {
 
@@ -67,7 +63,5 @@ namespace WebApp
             return new ApplicationSignInManager(context.GetUserManager<ApplicationUserManager>(), context.Authentication);
         }
     }
-
-
 
 }

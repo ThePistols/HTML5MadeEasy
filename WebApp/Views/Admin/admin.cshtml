@@ -6,15 +6,15 @@
 {
     if (User.IsInRole("Admin"))
     {
-        <p>Welcome to ADMIN PAGE @User.Identity.Name</p>
+    <p>Welcome to Admin site @User.Identity.Name</p>
+
+    <p>ADMIN PAGE</p>
+
+    <p>@ViewBag.teststring</p>
 
 
-        using (Html.BeginForm("UserRoles", "Admin"))
-        {
-            <input type="submit" value="Edit User Roles" />
-        }
 
-  //      @Html.ActionLink("Edit User Roles", "UserRoles", "Admin")
+    @Html.ActionLink("Edit User Roles", "UserRoles", "Admin")
 
     }
 
