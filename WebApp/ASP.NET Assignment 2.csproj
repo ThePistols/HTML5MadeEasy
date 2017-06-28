@@ -191,11 +191,17 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\checkmark.png" />
+    <Content Include="Content\Images\internet.jpg" />
+    <Content Include="Content\Images\kitten.jpg" />
+    <Content Include="Content\Images\n bar i.jpg" />
+    <Content Include="Content\Images\n bar.png" />
+    <Content Include="Content\Images\video.jpg" />
+    <Content Include="Content\Images\webpage.jpg" />
     <Content Include="Content\Images\x mark.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Images\basic layout.png" />
-    <Content Include="Images\Photo1.png" />
+    <Content Include="Content\Images\basic layout.png" />
+    <Content Include="Content\Images\Photo1.png" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -259,7 +265,9 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Images\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
