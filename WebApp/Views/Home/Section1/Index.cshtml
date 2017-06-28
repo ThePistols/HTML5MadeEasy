@@ -4,40 +4,9 @@
 
 @if (Request.IsAuthenticated)
 {
-
-    <p><b>Welcome to the Page Layout section @User.Identity.Name</b></p>
-    <img src="/images/basic layout.png" alt="Basic Page Layout" align="right" style="width:304px;height:228px;">
-    <p>Steps you should take in order to create a basic html website</p>
-    <li>    - The first thing you want is your Header for your page/section. </li>
-    <li>    - After that you will want to create a container for navigation links. </li>
-    <li>    - Define the sections that you want in your website. </li>
-    <li>    - Create any articles that you might want. </li>
-    <li>    - Creating sidebars. (Content aside from the content) </li>
-    <li>    - Create a proper footer for your page/section that has the copyright symbol to avoid plagiarism. </li>
-    <li>    - Any additional detail you might want to add. </li>
-    <li>    -  (Optional) Create a summary that defines a heading for the (details) element. </li>
-
+    <h1><b>Welcome to the Page Layout section @User.Identity.Name</b></h1><br />
+    <p>On this page you will learn how to start creating a very basic framework for a HTML page using HTML5 including the definition of HTML, use of tags and more.</p>
     <br />
-    <br />
-    <br />
-    <p><b>To create a file system website</b></p>
-
-<li>Open Visual Studio or Visual Studio Express for Web.</li>
-<li>In the File menu, click New Web Site.</li>
-<li>The New Web Site dialog box is displayed.</li>
-<li>Under Installed, click Visual Basic or Visual C# and then select ASP.NET Empty Web Site.</li>
-<li>For this walkthrough, you create a website that does not include prebuilt pages and other resources.</li>
-<li>In the Web location box, select File System, and then enter the name of the folder where you want to keep the pages for your website.</li>
-<li>For example, type the folder name C:\WebSites.</li>
-<li>Click OK.</li>
-<li>Visual Studio creates a website project that includes a Web.config file.</li>
-<li>In Solution Explorer, right - click the root of your Web site, and then click Add New Item.</li>
-<li>Select Web Form, name the file Default.aspx, and then click Add.</li>
-<br />
-<br />
-<br />
-<br />
-    <p><b>Regan's Content</b></p>
     <p><b>Introduction to HTML and HTML5</b></p>
     <p><b>What is HTML?</b></p>
     <p>
@@ -97,6 +66,8 @@
         </p>
         <br />
         <br />
+
+        <img src="~/Content/Images/basic layout.png" style="float:right" width="300" height="300" />
 
         <p><b>ACTIVITY 1</b></p>
         <li><b>1.)</b>  Type &lt;!DOCTYPE html&gt;</li>
@@ -185,6 +156,7 @@
             <li>Use the &lt;title&gt; and &lt;/title&gt; tags to enclose the text that should appear in the file browser's title bar. Place these in the &lt;head&gt; section of the file</li>
             <br />
             <br />
+            <img src="~/Content/Images/webpage.jpg" height="400" width="400" />
             <br />
             <br />
             <footer>
