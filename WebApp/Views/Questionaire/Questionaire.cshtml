@@ -1,53 +1,127 @@
 ﻿@using System.Web.Mvc.Html;
 
-<h1>Questionaire</h1>
+<h2>You should only come here after completing all the activities on each page!</h2>
 
 @using (Html.BeginForm("ProcessQuestionaire", "Questionaire"))
 {
+    <h1>Quiz</h1>
+    <h2>Section 1 - Basic Layout</h2>
+        <h3>Question One:</h3>
+        <h4>What does HTML stand for?</h4>
+        @Html.RadioButton("Answer1", "A") <span>Hyper Markup Language</span><br />
+        @Html.RadioButton("Answer1", "B") <span>HTML Markup Language</span><br />
+        @Html.RadioButton("Answer1", "C") <span>HyperText Markup Language</span>
+        <br />
+        <h3>Question Two:</h3>
+        <h4>What does a two-sided tag require to function correctly?</h4>
+        @Html.RadioButton("Answer2", "A") <span>Both opening and closing tags</span><br />
+        @Html.RadioButton("Answer2", "B") <span>Opening tags</span><br />
+        @Html.RadioButton("Answer2", "C") <span>Closing tags</span>
+        <br />
+        <h3>Question Three:</h3>
+        <h4>How do you specify document type?</h4>
+        @Html.RadioButton("Answer3", "A") <span>DOCUMENTTYPE html</span><br />
+        @Html.RadioButton("Answer3", "B") <span>DOCTYPE html</span><br />
+        @Html.RadioButton("Answer3", "C") <span>TYPE HTML</span>
+        <br />
+        <h3>Question Four:</h3>
+        <h4>What tag acts as a wrapper around the head and body content?</h4>
+        @Html.RadioButton("Answer4", "A") <span>html</span><br />
+        @Html.RadioButton("Answer4", "B") <span>content</span><br />
+        @Html.RadioButton("Answer4", "C") <span>body</span>
+        <br />
+        <h3>Question Five:</h3>
+        <h4>In the meta tag you can specify the coding language yes or no?</h4>
+        @Html.RadioButton("Answer5", "A") <span>Yes</span><br />
+        @Html.RadioButton("Answer5", "B") <span>No</span>
+        <br />
+        <br />
+        <h2>Section 2 - Embedded Content</h2>
+        <h3>Question Six:</h3>
+        <h4>Each graphic resides in a seperate file which must reside on the Web Server or somewhere the Web Server can reach it?</h4>
+        @Html.RadioButton("Answer6", "A") <span> Yes</span><br />
+        @Html.RadioButton("Answer6", "B") <span> No</span>
+        <br />
+        <br />
+        <h3>Question Seven:</h3>
+        <h4>The most common graphic formats are?</h4>
+        @Html.RadioButton("Answer7", "A") <span> jpg, gif, wav</span><br />
+        @Html.RadioButton("Answer7", "B") <span> gif, jpg, png</span><br />
+        @Html.RadioButton("Answer7", "C") <span> gif, png, mp4</span>
+        <br />
+        <br />
+        <h3>Question Eight:</h3>
+        <h4>The tag used when inserting a graphic is the?</h4>
+        @Html.RadioButton("Answer8", "A") <span> graph</span><br />
+        @Html.RadioButton("Answer8", "B") <span> image</span><br />
+        @Html.RadioButton("Answer8", "C") <span> img</span>
+        <br />
+        <br />
+        <h3>Question Nine:</h3>
+        <h4>You can resize an image by only width or only height but not both?</h4>
+        @Html.RadioButton("Answer9", "A") <span> True</span><br />
+        @Html.RadioButton("Answer9", "B") <span> False</span>
+        <br />
+        <br />
+        <h3>Question Ten:</h3>
+        <h4>Alternate text is also known as what?</h4>
+        @Html.RadioButton("Answer10", "A") <span> alt tags</span><br />
+        @Html.RadioButton("Answer10", "B") <span> alternate script</span><br />
+        @Html.RadioButton("Answer10", "C") <span> Neither</span>
+        <br />
+        <br />
+        <h3>Question Eleven:</h3>
+        <h4>The preload attribute controls what part of the video?</h4>
+        @Html.RadioButton("Answer11", "A") <span> Tells the browser to begin loading the video immediately</span><br />
+        @Html.RadioButton("Answer11", "B") <span> Tells the browser to restart immediately when finished</span><br />
+        @Html.RadioButton("Answer11", "C") <span> Plays the video as soon as the page opens</span>
+        <br />
+        <br />
+        <h3>Question Twelve:</h3>
+        <h4>Why would you use the Embed tag?</h4>
+        @Html.RadioButton("Answer12", "A") <span> To play a Flash video</span><br />
+        @Html.RadioButton("Answer12", "B") <span> When using Internet Explorer as Web Browser</span><br />
+        @Html.RadioButton("Answer12", "C") <span> Both</span>
+        <br />
+        <br />
+        <h2>Section 3 - Navigation</h2>
+        <h3>Question Thirteen:</h3>
+        <h4>Hyperlinks in a navigation bar can be?</h4>
+        @Html.RadioButton("Answer13", "A") <span> Text</span><br />
+        @Html.RadioButton("Answer13", "B") <span> Graphical</span><br />
+        @Html.RadioButton("Answer13", "C") <span> Both</span>
+        <br />
+        <br />
+        <h3>Question Fourteen:</h3>
+        <h4>A navigation bar should be placed where on the page?</h4>
+        @Html.RadioButton("Answer14", "A") <span> Top</span><br />
+        @Html.RadioButton("Answer14", "B") <span> Bottom</span><br />
+        @Html.RadioButton("Answer14", "C") <span> Both</span>
+        <br />
+        <br />
+        <h3>Question Fifteen:</h3>
+        <h4>The highest number of hyperlinks recommended to be on a horizontal bar is?</h4>
+        @Html.RadioButton("Answer15", "A") <span> 6</span><br />
+        @Html.RadioButton("Answer15", "B") <span> 7</span><br />
+        @Html.RadioButton("Answer15", "C") <span> 8</span>
+        <br />
+        <br />
+        <h3>Question Sixteen:</h3>
+        <h4>How large should a button graphic be at maximum?</h4>
+        @Html.RadioButton("Answer16", "A") <span> 100px</span><br />
+        @Html.RadioButton("Answer16", "B") <span> 150px</span><br />
+        @Html.RadioButton("Answer16", "C") <span> 200px</span>
+        <br />
+        <br />
+        <h3>Question Seventeen:</h3>
+        <h4>How long a delay should you have on a redirection page before being taken to a new URL?</h4>
+        @Html.RadioButton("Answer17", "A") <span> 5 seconds</span><br />
+        @Html.RadioButton("Answer17", "B") <span> 1 seconds</span><br />
+        @Html.RadioButton("Answer17", "C") <span> 3 seconds</span>
+        <br />
+        <br />
 
-    <p>How would you rate this website?</p>
-    <p>
-        @Html.Label("Awesome")
-        @Html.RadioButton("rating", "Awesome", false)
-    </p>
-    <p>
-        @Html.Label("Ok")
-        @Html.RadioButton("rating", "Ok", false)
-    </p>
-    <p>
-        @Html.Label("Average")
-        @Html.RadioButton("rating", "Average", false)
-    </p>
-    <p>
-        @Html.Label("Poor")
-        @Html.RadioButton("rating", "Poor", false)
-    </p>
 
-    <p>How did you hear about this course?</p>
-    <p>
-        @Html.Label("Through a Friend")
-        @Html.CheckBox("friend", false)
-    </p>
-
-    <p>
-        @Html.Label("Internet")
-        @Html.CheckBox("internet", false)
-    </p>
-
-    <p>
-        @Html.Label("Poster")
-        @Html.CheckBox("poster", false)
-    </p>
-
-    <p>Please select your preferred contact method</p>
-
-    @Html.DropDownList("contactMethod", new List<SelectListItem>
-     {
-        new SelectListItem{ Text="Phone", Value = "phone" },
-        new SelectListItem{ Text="Email", Value = "email" },
-        new SelectListItem{ Text="Facebook", Value = "facebook" },
-     })
-    <br />
-    <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" />
 
 }

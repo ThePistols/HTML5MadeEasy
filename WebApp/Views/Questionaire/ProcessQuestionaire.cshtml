@@ -1,14 +1,93 @@
-﻿
-<h1>Results</h1>
-
-<p>
-    Your preferred contact method is @ViewBag.ContactMethod
-</p>
-
-<p>How you found out about this course</p>
-
-@for (int i = 0; i < ViewBag.InformMethods.Count; i++)
-{
-    @ViewBag.InformMethods[i]<br />
+﻿@{
+    ViewBag.Title = "Results";
 }
 
+<h2>Results</h2>
+<h3><b>Section 1 - Basic Layout</b></h3>
+<p><b>Question One: </b></p>
+<li>You selected @ViewData["Answer1"]</li>
+<img src="@ViewData["Answer1Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>C</b>, HyperText Markup Language</p>
+<br />
+<p><b>Question Two: </b></p>
+<li>You selected @ViewData["Answer2"]</li>
+<img src="@ViewData["Answer2Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>A</b>, Both opening and closing tags</p>
+<br />
+<p><b>Question Three: </b></p>
+<li>You selected @ViewData["Answer3"]</li>
+<img src="@ViewData["Answer3Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>B</b>, DOCTYPE html</p>
+<br />
+<p><b>Question Four: </b></p>
+<li>You selected @ViewData["Answer4"]</li>
+<img src="@ViewData["Answer4Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>A</b>, html</p>
+<br />
+<p><b>Question Five: </b></p>
+<li>You selected @ViewData["Answer5"]</li>
+<img src="@ViewData["Answer5Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>A</b>, Yes</p>
+<br />
+<h3><b>Section 2 - Embedded Content</b></h3>
+<p><b></b>Question Six: </p>
+<li>You selected @ViewData["Answer6"]</li>
+<img src="@ViewData["Answer6Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>A</b>, Yes</p>
+<br />
+<p><b>Question Seven: </b></p>
+<li>You selected @ViewData["Answer7"]</li>
+<img src="@ViewData["Answer7Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>B</b>, gif, jpg, png</p>
+<br />
+<p><b>Question Eight: </b></p>
+<li>You selected @ViewData["Answer8"]</li>
+<img src="@ViewData["Answer8Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>C</b>, img</p>
+<br />
+<p><b>Question Nine: </b></p>
+<li>You selected @ViewData["Answer9"]</li>
+<img src="@ViewData["Answer9Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>B</b>, False</p>
+<br />
+<p><b>Question Ten: </b></p>
+<li>You selected @ViewData["Answer10"]</li>
+<img src="@ViewData["Answer10Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>A</b>, alt tags</p>
+<br />
+<p><b>Question Eleven: </b></p>
+<li>You selected @ViewData["Answer11"]</li>
+<img src="@ViewData["Answer11Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>A</b>, Tells the browser to begin loading the video immediately</p>
+<br />
+<p><b>Question Twelve: </b></p>
+<li>You selected @ViewData["Answer12"]</li>
+<img src="@ViewData["Answer12Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>C</b>, Both</p>
+<br />
+<h3><b>Section 3 - Navigation</b></h3>
+<p><b>Question Thirteen: </b></p>
+<li>You selected @ViewData["Answer13"]</li>
+<img src="@ViewData["Answer13Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>C</b>, Both</p>
+<br />
+<p><b>Question Fourteen: </b></p>
+<li>You selected @ViewData["Answer14"]</li>
+<img src="@ViewData["Answer14Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>C</b>, Both</p>
+<br />
+<p><b>Question Fifteen: </b></p>
+<li>You selected @ViewData["Answer15"]</li>
+<img src="@ViewData["Answer15Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>B</b>, 7</p>
+<br />
+<p><b>Question Sixteen: </b></p>
+<li>You selected @ViewData["Answer16"]</li>
+<img src="@ViewData["Answer16Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>B</b>, 150px</p>
+<br />
+<p><b>Question Seventeen: </b></p>
+<li>You selected @ViewData["Answer17"]</li>
+<img src="@ViewData["Answer17Result"]" width="50" height="50" style="margin:5px" />
+<p>The correct answer was: <b>A</b>, 5 seconds</p>
+<br />
