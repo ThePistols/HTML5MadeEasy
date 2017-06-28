@@ -78,7 +78,7 @@ namespace WebApp
             {
                 new ApplicationUser{ UserName="Jamie", Email="jamie@gmail.com", Id="b2cfcc69-1959-4913-ae78-070d5e60af05" },
                 new ApplicationUser{ UserName="Ben", Email="bweake@hotmail.com", Id="8b7efdb4-e0c8-40d0-ac17-4ab34c9da983" },
-                new ApplicationUser{ UserName="Regan", Email="sarah@sarah.com", Id="92f20888-702a-4b64-aad0-ffbd32462e2e" }
+                new ApplicationUser{ UserName="Regan", Email="Regan@gmail.com", Id="92f20888-702a-4b64-aad0-ffbd32462e2e" }
             };
 
             foreach (IdentityRole role in roles)

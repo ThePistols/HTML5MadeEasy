@@ -11,10 +11,18 @@
 
         using (Html.BeginForm("UserRoles", "Admin"))
         {
+            
             <input type="submit" value="Edit User Roles" />
         }
 
-  //      @Html.ActionLink("Edit User Roles", "UserRoles", "Admin")
+
+        using (Html.BeginForm("createnewuser", "Account"))
+        {
+            @Html.AntiForgeryToken();
+            <input type="submit" value="Create New User" />
+        }
+
+        //      @Html.ActionLink("Edit User Roles", "UserRoles", "Admin")
 
     }
 

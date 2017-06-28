@@ -5,7 +5,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using WebApp.Models;
-
+using System;
 
 namespace WebApp.Controllers
 {
@@ -105,11 +105,15 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email };
+                Guid guid1;
+                guid1 = Guid.NewGuid();
+                //added stuff here 
+                var user = new ApplicationUser { UserName = model.UserName, Email = model.Email, Id = guid1.ToString()};
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                    UserManager.AddToRole(user.Id, "User");
+                //    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                     return RedirectToAction("Index", "Home");
                 }
                 AddErrors(result);
