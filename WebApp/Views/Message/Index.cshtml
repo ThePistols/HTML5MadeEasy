@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "MessageIndex";
+}
+
+@if (Request.IsAuthenticated)
+{
+    <p>Welcome to the MESSAGING PAGE @User.Identity.Name</p>
+
+
+    using (Html.BeginForm("NewMessage", "Message"))
+    {
+        <input type="submit" value="New Message" />
+    }
+
+}

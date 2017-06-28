@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "NewMessage";
+}
+
+@if (Request.IsAuthenticated)
+{
+    <p>Welcome to the NEW MESSAGE PAGE @User.Identity.Name</p>
+
+
+    using (Html.BeginForm("Index", "Message"))
+    {
+        <input type="submit" value="Cancel" />
+    }
+
+}

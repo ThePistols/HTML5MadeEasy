@@ -227,6 +227,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\QuestionaireController.cs" />
     <Compile Include="Controllers\TeacherController.cs" />
     <Compile Include="Global.asax.cs">
@@ -258,6 +259,8 @@
     <Content Include="Views\Teacher\Teacher.cshtml" />
     <Content Include="Views\Admin\editroles.cshtml" />
     <Content Include="Views\Admin\editrolestest.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
+    <Content Include="Views\Message\NewMessage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -61,56 +61,61 @@
                     <li>
                         @if (Request.IsAuthenticated)
                         {
+                        <li>
                             @Html.ActionLink("Log Off", "LogOff", "Account")
+                        </li>
+                            <li>
+                                @Html.ActionLink("Messaging", "Index", "Message")
+                            </li>
                         }
                         else
                         {
                             @Html.ActionLink("Login", "Login", "Account")
                         }
-                    </li>
-                    @if (Request.IsAuthenticated)
-                    {
-                        if (User.IsInRole("Admin"))
+                        </li>
+                        @if (Request.IsAuthenticated)
                         {
-                            <li>
-                                @Html.ActionLink("Admin", "AdminIndex", "Admin")
+                            if (User.IsInRole("Admin"))
+                            {
+                                <li>
+                                    @Html.ActionLink("Admin", "AdminIndex", "Admin")
 
 
-                            </li>
-                            <li>
-                                @Html.ActionLink("Teacher", "TeacherIndex", "Teacher")
-                            </li>
+                                </li>
+                                <li>
+                                    @Html.ActionLink("Teacher", "TeacherIndex", "Teacher")
+                                </li>
+                            }
                         }
-                    }
-                    @if (Request.IsAuthenticated)
-                    {
-                        if (User.IsInRole("Teacher"))
+                        @if (Request.IsAuthenticated)
                         {
-                            <li>
-                                @Html.ActionLink("Teacher", "TeacherIndex", "Teacher")
-                            </li>
+                            if (User.IsInRole("Teacher"))
+                            {
+                                <li>
+                                    @Html.ActionLink("Teacher", "TeacherIndex", "Teacher")
+                                </li>
+                            }
                         }
-                    }
 
-                </ul>
-                <!-- /.navbar-collapse -->
+                    </ul>
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container -->
             </div>
-            <!-- /.container -->
+        </nav>
+
+        <!-- Page Content -->
+        <div class="container">
+            <div class="row">
+                @RenderBody()
+            </div>
+            <!-- /.row -->
         </div>
-    </nav>
+        <!-- /.container -->
 
-    <!-- Page Content -->
-    <div class="container">
-        <div class="row">
-            @RenderBody()
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
-
-</body>
+    </body>
 </html>
