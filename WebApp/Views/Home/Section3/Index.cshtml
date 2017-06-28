@@ -28,4 +28,169 @@
         <a class="navbar-brand" href="Index">Web App</a>
     </div>
 
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <p><b>Regan's Content</b></p>
+    <br />
+    <p><b>Creating Navigation Bars</b></p>
+    <p>In this section you will learn how to place a navigation bar on each page. A Navigation Bar is a set of hyperlinks that connect to the major pages of your website. These hyperlinks can either be text-based or graphical.</p>
+    <br />
+    <br />
+
+
+    <p><b>Planning Navigation</b></p>
+    <p>
+        Navigations can be easy to create but require some pre-planning to be effective and efficient. Before creating your navigation bar you should consider the overall structure of your website. It is recommended to create
+        a diagram that outlines the websites planned structure before creating the navigation bar. A navigation bar should contain links to the most important sections of the website plus a link to the Home Page.
+        There is no true rule about the number of items on a navagation bar but most try to keep it between four and seven.
+    </p>
+    <br />
+    <br />
+
+
+    <p><b>Creating a Text-Based Navigation Bar</b></p>
+    <p>
+        This the simplest and easiest form of navigation bar and is very user-friendly. They are usually placed at the top of the page in a single horizontal line. Some Web developers place a copy at the bottom of each page as well
+        for additional usability. <br />
+        HTML5 includes a &lt;nav&gt; tag which is a two-sided tag in which can optionally place the code for the navigation bar. The &lt;nav&gt; tag is designed to help browsers and style sheets identify sets of links as a navigation
+        element and handle them appropriately. If a browser doesn't support the &lt;nav&gt; tag it is ignored.
+
+    </p>
+    <br />
+    <br />
+
+    <p><b>ACTIVITY 1</b></p>
+    <li><b>1.)</b>At the first &lt;hr&gt; tag add a &lt;nav&gt; container and add the text for a navigation bar</li>
+    <li>
+        &lt;nav&gt;<br />
+        &lt;hr&gt;<br />
+        &lt;p&gt;Home, About Us, History, Awards, Gallery, Videos&lt;/p&gt;<br />
+        &lt;/nav&gt;<br />
+    </li>
+    <li><b>2.)</b> Save your Work and Refresh the page</li>
+    <p>The text intended for the navigation bar appears but the items are not clearly seperated. HTML ignores multiple spaces so instead use the nonbreaking space code when you want to insert extra spaces.</p>
+    <li><b>3.)</b>Insert a nonbreaking (and a normal space following it) between each section title. (Ignore . between &.nbsp; formatting wouldnt show what was required without it)</li>
+    <li> &lt;p&gt;Home &.nbsp;, About Us &.nbsp;, History &.nbsp;, Awards &.nbsp;, Gallery &.nbsp;, Videos&lt;/p&gt;</li>
+    <li><b>4.)</b>Insert a second horiztonal line below the navigation bar text but above the closing box.</li>
+    <li>
+        &lt;nav&gt;<br />
+        &lt;hr&gt;<br />
+        &lt;p&gt;Home &.nbsp;, About Us &.nbsp;, History &.nbsp;, Awards &.nbsp;, Gallery &.nbsp;, Videos&lt;/p&gt;<br />
+        &lt;hr&gt;<br />
+        &lt;/nav&gt;
+    </li>
+        <li><b>5.)</b>Set the margin for the paragraph to zero</li>
+        <li> &lt;p style = "margin:0px"&gt;Home &.nbsp;, About Us &.nbsp;, History &.nbsp;, Awards &.nbsp;, Gallery &.nbsp;, Videos&lt;/p&gt;</li>
+        <li><b>6.)</b>Add hyperlinks to each of the six items in the navigation bar to the corresponding pages</li>
+        <li>
+            &lt;nav&gt;<br />
+            &lt;hr&gt;<br />
+            &lt;a href = "Home.htm"&gt;Home&lt;/a&gt;&lt;&nbsp&gt;<br />
+            &lt;a href = "AboutUs.htm"&gt;About Us&lt;/a&gt;&lt;&nbsp&gt;<br />
+            &lt;a href = "history.htm"&gt;History&lt;/a&gt;&lt;&nbsp&gt;<br />
+            &lt;a href = "awards.htm"&gt;Awards&lt;/a&gt;&lt;&nbsp&gt;<br />
+            &lt;a href = "videos.htm"&gt;Videos&lt;/a&gt;&lt;&nbsp&gt;<br />
+            &lt;a href = "gallery.htm"&gt;Gallery&lt;/a&gt;&lt;&nbsp&gt;<br />
+            &lt;hr&gt;<br />
+            &lt;/nav&gt;<br />
+        </li>
+        <li><b>7.)</b>  Select the code for the entire navigation bar including the &lt;nav&gt; and &lt;nav&gt; tags and press Ctrl+C to copy it to the Clipboard.</li>
+        <li><b>8.)</b>  Select the &lt;nav&gt; tag at the bottom of the document and press Ctrl+V to replace it with a copy of the navigation bar</li>
+        <li><b>9.)</b>  Save your Work</li>
+        <li><b>10.)</b>  Submit</li>
+        <br />
+        <br />
+
+
+        <p><b>Creating a Graphical Navigational Bar</b></p>
+        <p>
+            Text based navigation bars are clear and easy to use but not that attractive. If you want to spruce up your site you might want to create a graphical navigation bar.
+            You can create them on your own using a graphic editing program like Photoshop. If you do create them remember these rules or guidelines:
+        </p>
+        <li>Keep the size of each button small (150 pixels wide a most)</li>
+        <li>Make each button the same size and shape. The only variation should be in the text they present</li>
+        <li>Save each button as a seperate file in GIF or JPG format</li>
+        <p>
+            If you have no talent or inclination to create your own then search the Web, there are thousands of sites with free graphical buttons that you can download. <br />
+            <br />
+            You set up a graphical navigation bar just like a text-based navigation bar but instead of hyperlinks from the text you use the graphic by
+            placing the &lt;img&gt; tag within the &lt;a&gt; tag. <br />
+            &lt;a href "AboutUs.htm"&gt;&lt;img src = "aboutus_button.jpg"&gt;&lt;/a&gt;
+        </p>
+        <br />
+        <br />
+
+
+        <p><b>ACTIVITY 2</b></p>
+        <li><b>1.)</b>  In the upper navigation bar, change the hyperlinks so that they reference the button graphics in the /images folder rather than the displaying text</li>
+        <li>
+            &lt;nav&gt;<br />
+            &lt;hr&gt;<br />
+            &lt;p style = "margin:0px"&gt;<br />
+            &lt;a href = "AboutUs.htm"&gt;&lt;/a&gt;&lt;img src = "images/btn_about" style = ""&gt;&lt;/a&gt;<br />
+            &lt;a href = "Home.htm"&gt;&lt;/a&gt;&lt;img src = "images/btn_home" style = ""&gt;&lt;/a&gt;<br />
+            &lt;a href = "Videos.htm"&gt;&lt;/a&gt;&lt;img src = "images/btn_videos" style = ""&gt;&lt;/a&gt;<br />
+            &lt;a href = "Gallery.htm"&gt;&lt;/a&gt;&lt;img src = "images/btn_gallery" style = ""&gt;&lt;/a&gt;<br />
+            &lt;a href = "History.htm"&gt;&lt;/a&gt;&lt;img src = "images/btn_history" style = ""&gt;&lt;/a&gt;<br />
+            &lt;a href = "Awards.htm"&gt;&lt;/a&gt;&lt;img src = "images/btn_awards" style = ""&gt;&lt;/a&gt;<br />
+            &lt;/p&gt;<br />
+            &lt;hr&gt;<br />
+            &lt;/nav&gt;<br />
+        </li>
+        <li><b>2.)</b>  Save your Work and Refresh Page</li>
+        <li><b>3.)</b>  Submit</li>
+        <br />
+        <br />
+
+
+        <p><b>Redirecting to Another URL</b></p>
+        <p>
+            If you decide it is time to move and you move your Webiste to a different URL then you should leave a redirection page explaining
+            what has happened to anyone who comes looking and taking them to your new website location. It is customary to include a delay of five seconds
+            before the page takes to your new location. It is also required to include a text hyperlink to the new page incase the redirection doesnt work. <br />
+            <br />
+            You implement this redirection operation by adding an attribute to a &lt;meta /&gt; tag in the &lt;head&gt; section of the page. You must create a
+            new &lt;meta /&gt; tag for this operation; you cannot add the attributes to any existing &lt;meta /&gt; tag that the document might have. <br />
+            Like This: &lt;meta http-equiv = "refresh" content = "5; url = http://www/google/com"&gt;<br />
+            Be sure to use a semicolon (not a comma) between the delay (the content attribute) and the url attribute.
+        </p>
+        <br />
+        <br />
+
+
+        <p><b>ACTIVITY 3</b></p>
+        <li><b>1.)</b> In the &lt;head&gt; section add a new &lt;meta /&gt; tag as follows: </li>
+        <li> &lt;meta http-equiv = "refresh" content = "5; url = newwebsite.htm"&gt;  </li>
+        <li><b>2.)</b> In the &lt;body&gt; section make the text click here into a hyperlink to newwebsite.htm</li>
+        <li>
+            &lt;p&gt;This page has been moved &lt;br&gt; If your browser supports automatic redirection the new will appear in 5 seconds &lt;br&gt;<br />
+            If the new page does not appear &lt;a href = "newebsite.htm"&gt;Click Here&lt;/a&gt;&lt;/p&gt;<br />
+        </li>
+        <li><b>3.)</b>  Save your Work and Refresh</li>
+        <li><b>4.)</b>  Click the browsers back button and check the hyperlink works.</li>
+        <li><b>5.)</b>  Submit</li>
+        <br />
+        <br />
+
+        <p><b>Key Points</b></p>
+        <li>A navigation bar contains a list of hyperlinks to the major pages on your site. It doesnt need to include every page on the site. The optimal number of links is between four and seven.</li>
+        <li>In HTML5, you can use the &lt;nav&gt; tag as a container to indicate that a group of links constitutes a navigation element</li>
+        <li>Plan your sites organization before creating your navigation bar. Draw a diagram and the pages connections to each other. Chose a file name for each page.</li>
+        <li>Navigation bars are traditionally placed at the top or on the left side of the page.</li>
+        <li>Many Web designers place a text version of their navigation bar at the bottom of each page four user convenience.</li>
+        <li>A text-based navigation is simply a series of hyperlinks.</li>
+        <li>A graphical navigation bar uses small graphics for hyperlinks. You can create these or use already created ones.</li>
+        <li>To redirect a page to a different URL create a &lt;meta /&gt; tag in the &lt;head&gt; section with the http-equivalent attribute</li>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <footer>
+            Copyright &#9400 HTML5 Made Easy
+        </footer>
+
 }
