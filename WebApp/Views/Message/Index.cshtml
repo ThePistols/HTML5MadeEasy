@@ -4,27 +4,32 @@
 
 @if (Request.IsAuthenticated)
 {
-    <p>Welcome to the MESSAGING PAGE @User.Identity.Name</p>
+    <h1><b>Welcome to the Messaging page @User.Identity.Name</b></h1><br />
 
 
-    using (Html.BeginForm("NewMessage", "Message"))
+    
+
+    for (int i = 0; i <= 0; i++)
     {
-        <input type="submit" value="New Message" />
-    }
-
-    for (int i = 0; i <= 2; i++)
-    {
-        <br />
         <br />
         <div>
+            <h3><b>Sample Message: </b></h3> 
             <p><h5><b>From: </b> Name goes here</h5></p>
             <p><h5><b>Subject: </b> Subject </h5></p>
             <p>
                 <h5><textarea disabled cols="50" rows="10" wrap="hard"> Message </textarea></h5>
 
+
+                <h3><b>Reply to Message: </b></h3>
                 @using (Html.BeginForm("NewMessage", "Message"))
                 {
                     <input type="submit" value="Reply" />
+                }
+                <br />
+                <h3><b>Create New Message: </b></h3>
+                @using (Html.BeginForm("NewMessage", "Message"))
+                {
+                <input type="submit" value="New Message" />
                 }
             </p>
         </div>
