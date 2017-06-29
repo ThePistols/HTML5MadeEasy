@@ -6,6 +6,9 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.AspNet.Identity.EntityFramework;
 using System.Collections.Generic;
 using System.Linq;
+using System.ComponentModel.DataAnnotations;
+using System;
+using System.Web.UI;
 
 [assembly: OwinStartup(typeof(WebApp.Startup))]
 
@@ -33,6 +36,8 @@ namespace WebApp
 
 
         }
+
+
 
         private void seedDatabase()
         {
