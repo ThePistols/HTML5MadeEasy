@@ -4,9 +4,10 @@
 
 @if (Request.IsAuthenticated)
 {
-    <p>Welcome to Admin site @User.Identity.Name</p>
+    <h1><b>Welcome to the Teacher page @User.Identity.Name</b></h1>
+    <h4><b>You can only access this page if you are a teacher.</b></h4>
 
-    <p>TEACHER PAGE?</p>
+    <p>On the teacher page you can see a report that contains a list of users, there different roles and when they last accessed the site.</p>
 
     <p>@ViewBag.teststring</p>
 

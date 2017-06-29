@@ -5,7 +5,7 @@
 @if (Request.IsAuthenticated)
 {
     <h1><b>Welcome to the Navigation Page @User.Identity.Name</b></h1>
-    <p>On this page you will learn how to create navigation bars using HTML5 including text and graphical based navigation bars and you will learn how to create a redirection page if you ever decided to change Website locations</p>
+    <p>On this page you will learn how to create navigation bars using HTML5 including text and graphical based navigation bars and how to create a redirection page</p>
     <br />
     <p><b>Creating Navigation Bars</b></p>
     <p>In this section you will learn how to place a navigation bar on each page. A Navigation Bar is a set of hyperlinks that connect to the major pages of your website. These hyperlinks can either be text-based or graphical.</p>
@@ -43,10 +43,10 @@
         &lt;/nav&gt;<br />
     </li>
     <li><b>2.)</b> Save your Work and Refresh the page</li>
-    <p>The text intended for the navigation bar appears but the items are not clearly seperated. HTML ignores multiple spaces so instead use the nonbreaking space code when you want to insert extra spaces.</p>
-    <li><b>3.)</b>Insert a nonbreaking (and a normal space following it) between each section title. (Ignore . between &.nbsp; formatting wouldnt show what was required without it)</li>
+    <p>The text intended for the navigation bar appears but the items are not clearly seperated. HTML ignores multiple spaces so instead use the nonbreaking space code (&.nbsp;) when you want to insert extra spaces.</p>
+    <li><b>3.)</b>Insert a nonbreaking (and a normal space following it) between each section title. (Ignore . between &.nbsp; formatting wouldnt show to the page what was required without it)</li>
     <li> &lt;p&gt;Home &.nbsp;, About Us &.nbsp;, History &.nbsp;, Awards &.nbsp;, Gallery &.nbsp;, Videos&lt;/p&gt;</li>
-    <li><b>4.)</b>Insert a second horiztonal line below the navigation bar text but above the closing box.</li>
+    <li><b>4.)</b>Insert a second horizontal line below the navigation bar text but above the closing box.</li>
     <li>
         &lt;nav&gt;<br />
         &lt;hr&gt;<br />
@@ -72,14 +72,15 @@
         <li><b>8.)</b>  Select the &lt;nav&gt; tag at the bottom of the document and press Ctrl+V to replace it with a copy of the navigation bar</li>
         <li><b>9.)</b>  Save your Work</li>
         <li><b>10.)</b>  Submit</li>
+        <input type="button" value="Submit Activity 1" />
         <br />
         <br />
         <img src="~/Content/Images/n bar.png" width="600" height="200" />
-
+        <br />
         <p><b>Creating a Graphical Navigational Bar</b></p>
         <p>
             Text based navigation bars are clear and easy to use but not that attractive. If you want to spruce up your site you might want to create a graphical navigation bar.
-            You can create them on your own using a graphic editing program like Photoshop. If you do create them remember these rules or guidelines:
+            You can create them on your own using a graphic editing program like Photoshop. If you do create them remember these three rules or guidelines:<br />
         </p>
         <li>Keep the size of each button small (150 pixels wide a most)</li>
         <li>Make each button the same size and shape. The only variation should be in the text they present</li>
@@ -113,18 +114,19 @@
         </li>
         <li><b>2.)</b>  Save your Work and Refresh Page</li>
         <li><b>3.)</b>  Submit</li>
+        <input type="button" value="Submit Activity 2" />
         <br />
         <br />
 
         <img src="~/Content/Images/n bar i.jpg" height="200" width="600" />
+        <br />
         <p><b>Redirecting to Another URL</b></p>
         <p>
-            If you decide it is time to move and you move your Webiste to a different URL then you should leave a redirection page explaining
-            what has happened to anyone who comes looking and taking them to your new website location. It is customary to include a delay of five seconds
-            before the page takes to your new location. It is also required to include a text hyperlink to the new page incase the redirection doesnt work. <br />
+            If you decide it is time to move your Webiste to a different URL then you should leave a redirection page explaining what has happened to anyone who comes looking and taking them to your new website location. <br />
+            It is customary to include a delay of five seconds before the page takes to your new location. It is also required to include a text hyperlink to the new page incase the redirection doesnt work. <br />
             <br />
             You implement this redirection operation by adding an attribute to a &lt;meta /&gt; tag in the &lt;head&gt; section of the page. You must create a
-            new &lt;meta /&gt; tag for this operation; you cannot add the attributes to any existing &lt;meta /&gt; tag that the document might have. <br />
+            new &lt;meta /&gt; tag for this operation, you cannot add the attributes to any existing &lt;meta /&gt; tag that the document might have. <br />
             Like This: &lt;meta http-equiv = "refresh" content = "5; url = http://www/google/com"&gt;<br />
             Be sure to use a semicolon (not a comma) between the delay (the content attribute) and the url attribute.
         </p>
@@ -143,6 +145,7 @@
         <li><b>3.)</b>  Save your Work and Refresh</li>
         <li><b>4.)</b>  Click the browsers back button and check the hyperlink works.</li>
         <li><b>5.)</b>  Submit</li>
+        <input type="button" value="Submit Activity 3" />
         <br />
         <br />
 
@@ -162,6 +165,7 @@
         <br />
         <footer>
             Copyright &#9400 HTML5 Made Easy
+            Creators: Jamie Hitchens, Regan Thomas, Ben Weake
         </footer>
 
 }

@@ -6,16 +6,16 @@
 @if (Request.IsAuthenticated)
 {
     <h1><b>Welcome to the Page Layout section @User.Identity.Name</b></h1><br />
-    <p>On this page you will learn how to start creating a very basic framework for a HTML page using HTML5 including the definition of HTML, use of tags and more.</p>
+    <p>On this page you will learn how to start creating a very basic framework for a HTML page using HTML5 including the definition of HTML, the use of tags and how to display text.</p>
     <br />
     <p><b>Introduction to HTML and HTML5</b></p>
     <p><b>What is HTML?</b></p>
     <p>
-        In simple terms a Web Page or HTML document is a plain text file that has been encoded using Hypertext Markup Language (HTML) so<br />
+        In simple terms a Web Page or a HTML document is a plain text file that has been encoded using Hypertext Markup Language (HTML) so<br />
         that it appears that it appears nicely formatted in a Web browser.
         Here is what HTML means word-by word:
     </p>
-        <li>HyperText: Text that you click to jump from document to document. This is a reference to the ability of Web Pages to link to one another</li>
+        <li>HyperText: Text that you click to jump from document to document. This is a reference to the ability of Web Pages to be linked to one another</li>
         <li>Markup: Tags that apply layout and formatting conventions to plain text. Literally, the plain text is "marked up" with the tags</li>
         <li>Language: A reference to the fact that HTML is considered a programming language.</li>
         <br />
@@ -23,28 +23,22 @@
 
         <p><b>Understanding HTML Tags</b></p>
         <p>
-            The code within a HTML file consists of text surrounded by "tags". These tags indicate where the formatting should be applied, how the layout should be<br />
+            The code within a HTML file consists of text surrounded by "tags". These tags indicate where the formatting should be applied, how the page is layed out,<br />
             what pictures should be placed in certain locations and more. For example, suppose you wanted a certain word to be italic, like this:
         </p>
-        <li><i>Everything</i> is awesome.</li>
+        <li>&lt;<i>&gt;Everything&lt;</i>&gt; is awesome.</li>
         <p>
             That's an example of a two-sided tag which encloses text between an opening and closing tag. Note the forward slash "/" in the closing tag<br />
-            That slash differentiates an opening tag from a closnig tag. With a two-sided tag there must always be a closing tag for any opening tag.
+            That slash differentiates an opening tag from a closing tag. With a two-sided tag there must always be a closing tag for any opening tag.
         </p>
         <br />
         <br />
 
         <p><b>What is HTML5?</b></p>
         <p>
-            HTML5 is a revised and improved version of HTML4 with new capabilities. It offers improvements in many areas including multimedia but<br />
-            but for basic coding the biggest improvement is that there are now specific codes for different content that were previously handled more generally.
+            HTML5 is a revised and improved version of HTML4 with new capabilities. It offers improvements in many areas including multimedia <br />
+            but for basic coding in HTML5 the biggest improvement is that there are now specific codes for different content that were previously handled more generally.
         </p>
-        <br />
-        <br />
-
-
-        <p><b>Why Code in HTML5?</b></p>
-        <p>HTML5 enables clearner, easier-to-write code. It adds some important new tags to make audio, video and application integration smoother and more reliable. </p>
         <br />
         <br />
 
@@ -57,7 +51,7 @@
 
         <p><b>Creating HTML, Head and Body Sections</b></p>
         <p>
-            All of your HTML coding (except the DOCTYPE tag) should be placed within the two-sided html&gt; /html &gt;tag. It serves as a wrapper around all other tags in the document. <br />
+            All of your HTML coding (except the DOCTYPE tag) should be placed within the two-sided &lt;html&gt; &lt;/html &gt;tag. It serves as a wrapper around all other tags in the document. <br />
             Your document should have two sections a head and a body. <br />
             <br />
             The head is defined by the &lt;head&gt; &lt;/head&gt;tag. It contains the page title which is the text that will appear in the title bar of the Web Browser and on the <br />
@@ -71,29 +65,30 @@
         <img src="~/Content/Images/basic layout.png" style="float:right" width="300" height="300" />
 
         <p><b>ACTIVITY 1</b></p>
-        <li><b>1.)</b>  Type &lt;!DOCTYPE html&gt;</li>
-        <li><b>2.)</b>  Press Enter</li>
-        <li><b>3.)</b>  Type &lt;html&gt;</li>
-        <li><b>4.)</b>  Press Enter</li>
-        <li><b>5.)</b>  Type &lt;head&gt;</li>
-        <li><b>6.)</b>  Press Enter</li>
-        <li><b>7.)</b>  Type &lt;/head&gt;</li>
-        <li><b>8.)</b>  Press Enter</li>
-        <li><b>9.)</b>  Type &lt;body&gt;</li>
-        <li><b>10.)</b> Press Enter</li>
-        <li><b>11.)</b> Type &lt;/body&gt;</li>
-        <li><b>12.)</b> Press Enter</li>
-        <li><b>13.)</b> Type &lt;/html&gt;</li>
+        <li><b>1.)</b>  Enter this at the top of a blank document in Notepad++</li><br />
+        <li><b>1.)</b>  &lt;!DOCTYPE html&gt;<br />
+            <br />
+                        &lt;html&gt;<br />
+            <br />
+                        &lt;head&gt;<br />
+            <br />
+                        &lt;/head&gt;<br />
+            <br />
+                        &lt;body &gt;<br />
+            <br />
+                        &lt;/body&gt;<br />
+            <br />
+                        &lt;/html&gt;<br />
+        </li>
         <li><b>14.)</b> Save Your Work</li>
         <li><b>15.)</b> Submit</li>
-
+        <input type="button" value="Submit Activity 1" />
         <br />
         <br />
         <p><b>Text on your Page</b></p>
         <p>
-            Within the body section you will type the text that will appear on the web page. Each paragraph should be enclosed in the two-sided tag that indicates its type. <br />
-            The most is the &lt;p&gt; tag.<br />
-            <br />
+            Within the body section you is where the text that will appear on the web page is typed. Each paragraph should be enclosed in the two-sided tag that indicates its type. <br />
+            The most is the &lt;p&gt; tag but you can also use the &lt;b&gt; tag and the &lt;i&gt; for formatting<br />
             When a browser displays a Web page, it inserts vertical white space between paragraphs. It can be convenient when writing large amounts of text but inconvenient <br />
             when creating something like a list. To create a line break without officially starting a new paragraph use the &lt;br /&gt; tag. This is a one sided tag placed <br />
             within the paragraph at the end of the line like this:
@@ -111,24 +106,25 @@
             <li>&lt;p&gt;Welcome to my first Website. When finished it will have three pages, embedded images and video and internal navigation&lt;/p&gt;</li>
             <li><b>2.)</b>  Save Work</li>
             <li><b>3.)</b>  Submit</li>
+            <input type="button" value="Submit Activity 2" />
             <br />
             <br />
 
 
             <p><b>Meta Tags</b></p>
             <p>
-                The &lt;meta /&gt; tag has several functions. One of the main ones is to identify keywords related to the page. Placing the appropriate words on your <br />
-                page can make it easier for people to find your page when searching the web. When search engines index your page they relay not only on the fully text <br />
+                The &lt;meta /&gt; tag has several different functions. One of the main ones is to identify keywords related to the page. Placing the appropriate words on your <br />
+                page can make it easier for people to find your page when searching the web. When search engines index your page they relay not only on the full text of the page <br />
                 but also on the Meta tag area.
                 <br />
-                The Meta tag can also be used to redirect visitors to another page. For example if you have moved sites you can place a "We have Moved" page at the original address and use <br />
-                the &lt;meta /&gt; tag to redirect users to the new address after a delay.
+                The Meta tag can be used to redirect visitors to another page. For example if you have moved sites you can place a "We have Moved" page at the original address and use <br />
+                the &lt;meta /&gt; tag to redirect users to the new address after a delay which will be covered in the Navigation .
                 <br />
                 The Meta tag can also be used to specify a character encoding scheme. It is not a big issue when you code only English but is considered good practice to include anyway. <br />
-                If you want you can add the code:
+                If you want you can add it to the &lt;head&gt; section of your document<br />
+                Like This:
             </p>
             <li>&lt;meta charset "utf-8"&gt;</li>
-            <p>To the &lt;head&gt; section of your document to specify that your page is in English</p>
             <br />
             <br />
 
@@ -142,6 +138,7 @@
             <li><b>4.)</b>  Type &lt;meta encoding = "utf-8"&gt;</li>
             <li><b>5.)</b>  Save Work</li>
             <li><b>6.)</b>  Submit</li>
+            <input type="button" value="Submit Activity 3" />
             <br />
             <br />
             <br />
@@ -151,7 +148,7 @@
             <li>All the HTML coding in a document (except the DOCTYPE) is enclosed within a two-sided &lt;html&gt; tag.</li>
             <li>The &lt;html&gt; and &lt;/html&gt; tags enclose the &lt;head&gt; and &lt;body&gt; sections as a wrapper </li>
             <li>The &lt;head&gt; area contains the page title (&lt;title&gt;) and any &lt;meta /&gt; tags. The &lt;body&gt; area contains all the displayable text for the page</li>
-            <li>Enclose each paragraph in the two-sided &lt;html&gt; tag. Most browsers add space between paragraphs when displaying the page.</li>
+            <li>Enclose each paragraph in the two-sided &lt;p&gt; tag. Most browsers add space between paragraphs when displaying the page.</li>
             <li>To create a line break without starting a new paragraph use the one-sided &lt;br /&gt; tag</li>
             <li>Use &lt;meta /&gt; tags in the &lt;head&gt; section to indicate keywords and the document encoding language</li>
             <li>Use the &lt;title&gt; and &lt;/title&gt; tags to enclose the text that should appear in the file browser's title bar. Place these in the &lt;head&gt; section of the file</li>
@@ -162,6 +159,7 @@
             <br />
             <footer>
                 Copyright &#9400 HTML5 Made Easy
+                Creators: Jamie Hitchens, Regan Thomas, Ben Weake
             </footer>
 
 

@@ -6,12 +6,13 @@
 {
     if (User.IsInRole("Admin"))
     {
-        <p>Welcome to ADMIN PAGE @User.Identity.Name</p>
-
+        <h1><b>Welcome to the Admin Page @User.Identity.Name</b></h1>
+        <h4><b>You can only access this page if you are an Administrator</b></h4>
+        <p>On the admin page you can edit user roles and create new users</p>
 
         using (Html.BeginForm("UserRoles", "Admin"))
         {
-            
+            <h4>Edit User Roles:</h4>
             <input type="submit" value="Edit User Roles" />
         }
         <br />
@@ -21,6 +22,7 @@
         using (Html.BeginForm("createnewuser", "Account"))
         {
             @Html.AntiForgeryToken();
+            <h4>Create New User:</h4>
             <input type="submit" value="Create New User" />
         }
 
