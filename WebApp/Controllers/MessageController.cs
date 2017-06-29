@@ -2,6 +2,9 @@
 using Microsoft.AspNet.Identity.EntityFramework;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -35,7 +38,7 @@ namespace WebApp.Controllers
 
             USER.Add(userNAME);     // 0
             USER.Add(userID);       // 1
-            USER.Add(userEMAIL);    // 2
+            USER.Add("<" + userEMAIL + ">");    // 2
 
             ViewBag.userdetails = USER;
 
@@ -62,20 +65,29 @@ namespace WebApp.Controllers
         public ActionResult Submit()
         {
 
-            //         string connStr = ConfigurationManager.ConnectionStrings["myConnectionString"].ConnectionString;
-            //         using (SqlConnection conn = new SqlConnection(connStr))
-            //         {
-            //             string sql = "INSERT INTO AspNetMessages (MessageText) Values (@msg)";
-            //             conn.Open();
-            //             SqlCommand cmd = new SqlCommand(sql, conn);
-            //             cmd.Parameters.Add("@msg", SqlDbType.NVarChar);
-            //             cmd.Parameters["@msg"].Value = "this is my message";
-            //
-            //             //uncomment line below to execute the query
-            //         //    cmd.ExecuteNonQuery();
-            //             conn.Close();
-            //
-            //         }
+            string connStr = ConfigurationManager.ConnectionStrings["Messaging"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connStr))
+            {
+                string sql = "INSERT INTO [Messaging] (ReciverID, SenderID, Title, Message, DateTime) Values (@rid, @sid, @title, @msg, @datetime)";
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.Add("@rid", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@sid", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@title", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@msg", SqlDbType.NVarChar);
+                cmd.Parameters.Add("@datetime", SqlDbType.DateTime);
+
+                cmd.Parameters["@rid"].Value = "reciever";
+                cmd.Parameters["@sid"].Value = "sender";
+                cmd.Parameters["@title"].Value = "Title";
+                cmd.Parameters["@msg"].Value = "this is my message";
+                cmd.Parameters["@datetime"].Value = DateTime.Now;
+
+                //uncomment line below to execute the query
+                    cmd.ExecuteNonQuery();
+                conn.Close();
+
+            }
             return View("index");
         }
     }
