@@ -186,6 +186,7 @@
       <DependentUpon>Messaging.mdf</DependentUpon>
     </Content>
     <Content Include="App_Data\Messaging.mdf" />
+    <Content Include="App_Themes\Theme\StyleSheet.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -212,6 +213,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="App_Themes\Theme\Skin.skin" />
+    <Content Include="App_Themes\Theme2\Skin2.skin" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -261,6 +264,8 @@
     <Content Include="Views\Admin\editrolestest.cshtml" />
     <Content Include="Views\Message\Index.cshtml" />
     <Content Include="Views\Message\NewMessage.cshtml" />
+    <Content Include="Views\Account\LoginList.cshtml" />
+    <Content Include="Views\Message\Inbox.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
