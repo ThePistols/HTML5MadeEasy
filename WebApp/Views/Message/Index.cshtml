@@ -12,4 +12,22 @@
         <input type="submit" value="New Message" />
     }
 
+    for (int i = 0; i <= 2; i++)
+    {
+        <br />
+        <br />
+        <div>
+            <p><h5><b>From: </b> Name goes here</h5></p>
+            <p><h5><b>Subject: </b> Subject </h5></p>
+            <p>
+                <h5><textarea disabled cols="50" rows="10" wrap="hard"> Message </textarea></h5>
+
+                @using (Html.BeginForm("NewMessage", "Message"))
+                {
+                    <input type="submit" value="Reply" />
+                }
+            </p>
+        </div>
+    }
+
 }

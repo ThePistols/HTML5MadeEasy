@@ -14,16 +14,19 @@
 
         <br />
 
+
         @using (Html.BeginForm("Submit", "Message", new { fromID = ViewBag.userdetails[1] }))
         {
+            @Html.AntiForgeryToken()
             <p>From: <input type="text" value="@ViewBag.userdetails[0] @ViewBag.userdetails[2]" disabled /></p>
             <br />
             <p>
-                To: @Html.DropDownList("selecteduser", new SelectList(ViewBag.senduserNAME, ViewBag.senduserID))
+
+                To: @Html.DropDownList("selecteduser", new SelectList(ViewBag.senduserNAME))
             </p>
             <br />
 
-            <p><input type="text" placeholder="Subject" /></p>
+            <p><input type="text" placeholder="Subject" name="subject" /></p>
             <br />
             <p>Message: </p>
             <p>

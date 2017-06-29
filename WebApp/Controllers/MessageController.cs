@@ -17,6 +17,8 @@ namespace WebApp.Controllers
         // GET: Message
         public ActionResult Index()
         {
+
+         
             return View();
         }
 
@@ -46,24 +48,38 @@ namespace WebApp.Controllers
             var USERNAME = new List<String>();
             var USEREMAIL = new List<String>();
 
+
             foreach (ApplicationUser current in currentUsers)
             {
+
                 if (current.Id != userID)
                 {
                     USERID.Add(current.Id);
-                    USERNAME.Add(current.UserName + " <" + current.Email + ">");
+                    USERNAME.Add(current.UserName);
+                    USEREMAIL.Add(current.Email);
                 }
             }
 
             ViewBag.senduserID = USERID;
             ViewBag.senduserNAME = USERNAME;
+            ViewBag.senduserEMAIL = USEREMAIL;
 
 
             return View();
         }
 
-        public ActionResult Submit()
+
+
+        [ValidateAntiForgeryToken]
+        [ValidateInput(false)]
+        public ActionResult Submit(string fromID, string selecteduser, string subject, string message)
         {
+
+            var userManager = new UserManager<ApplicationUser>(
+            new UserStore<ApplicationUser>(new ApplicationDbContext())
+            );
+
+            var temp = userManager.FindByName(selecteduser);            
 
             string connStr = ConfigurationManager.ConnectionStrings["Messaging"].ConnectionString;
             using (SqlConnection conn = new SqlConnection(connStr))
@@ -77,14 +93,14 @@ namespace WebApp.Controllers
                 cmd.Parameters.Add("@msg", SqlDbType.NVarChar);
                 cmd.Parameters.Add("@datetime", SqlDbType.DateTime);
 
-                cmd.Parameters["@rid"].Value = "reciever";
-                cmd.Parameters["@sid"].Value = "sender";
-                cmd.Parameters["@title"].Value = "Title";
-                cmd.Parameters["@msg"].Value = "this is my message";
+                cmd.Parameters["@rid"].Value = fromID;
+                cmd.Parameters["@sid"].Value = temp.Id;
+                cmd.Parameters["@title"].Value = subject;
+                cmd.Parameters["@msg"].Value = message;
                 cmd.Parameters["@datetime"].Value = DateTime.Now;
 
                 //uncomment line below to execute the query
-                    cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();
                 conn.Close();
 
             }
