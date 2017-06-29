@@ -8,6 +8,11 @@
     {
         <h1><b>Welcome to the Edit Roles Page @User.Identity.Name</b></h1><br />
         <p>On this page you will be able to change user roles within the application.</p>
+
+        using (Html.BeginForm("AdminIndex", "Admin"))
+        {
+            <input type="submit" value="Back" />
+        }
         for (int i = 0; i < ViewBag.User.Count; i++)
         {
             <br />

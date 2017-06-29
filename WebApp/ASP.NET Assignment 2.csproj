@@ -186,6 +186,10 @@
       <DependentUpon>Messaging.mdf</DependentUpon>
     </Content>
     <Content Include="App_Data\Messaging.mdf" />
+    <Content Include="App_Data\Questions.ldf">
+      <DependentUpon>Questions.mdf</DependentUpon>
+    </Content>
+    <Content Include="App_Data\Questions.mdf" />
     <Content Include="App_Themes\Theme\StyleSheet.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
