@@ -102,17 +102,6 @@ namespace WebApp.Controllers
 
 
 
-        public ActionResult testing(String message)
-        {
-            List<String> result = System.Web.Helpers.Json.Decode<List<String>>(message);
-            ViewBag.message = result;
-
-            getUserRoles();
-            return View("editroles");
-        }
-
-
-
 
     }
 }

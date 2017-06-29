@@ -6,33 +6,53 @@
 {
     <h1><b>Welcome to the Messaging page @User.Identity.Name</b></h1><br />
 
-
-    
-
-    for (int i = 0; i <= 0; i++)
+    <h3><b>Create New Message: </b></h3>
+    using (Html.BeginForm("NewMessage", "Message"))
     {
-        <br />
-        <div>
-            <h3><b>Sample Message: </b></h3> 
-            <p><h5><b>From: </b> Name goes here</h5></p>
-            <p><h5><b>Subject: </b> Subject </h5></p>
-            <p>
-                <h5><textarea disabled cols="50" rows="10" wrap="hard"> Message </textarea></h5>
-
-
-                <h3><b>Reply to Message: </b></h3>
-                @using (Html.BeginForm("NewMessage", "Message"))
-                {
-                    <input type="submit" value="Reply" />
-                }
-                <br />
-                <h3><b>Create New Message: </b></h3>
-                @using (Html.BeginForm("NewMessage", "Message"))
-                {
-                <input type="submit" value="New Message" />
-                }
-            </p>
-        </div>
+        <input type="submit" value="New Message" />
     }
 
+    if (ViewBag.result != null)
+    {
+        //     for (int i = 0; i < ViewBag.result.Count; i++)
+        //     {
+        //         <p>@ViewBag.result[i]</p>
+        //     }
+
+        if (ViewBag.result.Count > 4)
+        {
+
+            for (int i = 0; i < ViewBag.result.Count; i = i + 5)
+            {
+                //    code to send string list to controller and back
+                var messagelist = new List<String>();
+                messagelist.Add(ViewBag.result[i + 1]); //from
+                messagelist.Add(ViewBag.result[i + 2]); //subject
+                messagelist.Add(ViewBag.result[i + 3]); //message
+                messagelist.Add(ViewBag.result[i]); //to
+
+                ViewBag.messagereply = messagelist;
+
+
+                //    @Html.ActionLink("Send String List", "testing", "Admin", new { message = Json.Encode(ViewBag.messagereply) }, null)
+
+                <br />
+                <div>
+                    <p><h5><b>From: </b>@ViewBag.result[i + 1]</h5></p>
+                    <p><h5><b>Subject: </b>@ViewBag.result[i + 2]</h5></p>
+                    <p><h5><b>Date time recived: </b>@ViewBag.result[i + 4]</h5></p>
+                    <p>
+                        <h5><textarea disabled cols="50" rows="10" wrap="hard">@ViewBag.result[i + 3]</textarea></h5>
+
+                        @using (Html.BeginForm("Reply", "Message", new { message = Json.Encode(ViewBag.messagereply) }))
+                        {
+                            <input type="submit" value="Reply" />
+                        }
+                        <br />
+                    </p>
+                </div>
+                <br />
+            }
+        }
+    }
 }

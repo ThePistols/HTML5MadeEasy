@@ -7,25 +7,37 @@
     <h1><b>Welcome to the New Message Page @User.Identity.Name</b></h1><br />
 
     <div>
-        
 
 
-        @using (Html.BeginForm("Submit", "Message", new { fromID = ViewBag.userdetails[1] }))
+
+        @using (Html.BeginForm("Submit", "Message", new { fromID = ViewBag.userdetails[1], replyname = ViewBag.message[0] }))
         {
             @Html.AntiForgeryToken()
             <p>From: <input type="text" value="@ViewBag.userdetails[0] @ViewBag.userdetails[2] " disabled /></p>
             <br />
-            <p>
-
-                To: @Html.DropDownList("selecteduser", new SelectList(ViewBag.senduserNAME))
-            </p>
+            if (ViewBag.message != null)
+            {
+                <p>To: <input type="text" value="@ViewBag.message[0] " disabled /></p>
+            }
+            else
+            {
+                <p>
+                    To: @Html.DropDownList("selecteduser", new SelectList(ViewBag.senduserNAME))
+                </p>
+            }
             <br />
 
-            <p><input type="text" placeholder="Subject" name="subject" /></p>
+            <p><input type="text" placeholder="Subject" name="subject" value="RE: @ViewBag.message[1]" /></p>
             <br />
             <p>Message: </p>
             <p>
-                <textarea name="message" cols="50" rows="10" wrap="hard"></textarea>
+                <textarea name="message" cols="50" rows="10" wrap="hard">
+
+
+
+
+@ViewBag.replymessage1
+                </textarea>
                 <br />
                 <br />
                 <h3><b>Send Message: </b></h3>
