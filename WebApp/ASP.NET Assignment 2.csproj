@@ -264,6 +264,8 @@
     <Content Include="Views\Admin\editrolestest.cshtml" />
     <Content Include="Views\Message\Index.cshtml" />
     <Content Include="Views\Message\NewMessage.cshtml" />
+    <Content Include="Views\Account\LoginList.cshtml" />
+    <Content Include="Views\Message\Inbox.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

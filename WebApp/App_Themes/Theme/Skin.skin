@@ -14,8 +14,5 @@ Default skin template. The following skins are provided as examples only.
 <asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
 
 --%>
-<asp:Button runat="server" 
-  BackColor="Red" 
-  ForeColor="White" 
-  Font-Name="Arial" 
-  Font-Size="9px" />
+
+<asp:button runat="server" BackColor="lightblue" ForeColor="black" />
