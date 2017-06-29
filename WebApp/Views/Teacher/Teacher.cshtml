@@ -9,8 +9,6 @@
 
     <p>On the teacher page you can see a report that contains a list of users, there different roles and when they last accessed the site.</p>
 
-    <p>@ViewBag.teststring</p>
-
     <p>@ViewBag.RoleList</p>
 
     if (ViewBag.UserList != null)
@@ -21,7 +19,74 @@
         }
     }
 
-
+    for (int i = 0; i <= 0; i++)
+    {
+        <br />
+        <div>
+            <h3><b>Quiz Results: </b></h3>
+            <h4><b>USER: @User.Identity.Name </b></h4>
+            <p><b>Attempt: [he will need to attach the number from database here] </b></p>
+            
+            <h5><b>Section 1 - Basic Layout</b></h5>
+            <p><b>Question One: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer1"]</li>
+            <p>The correct answer was: <b>C</b>, HyperText Markup Language</p>
+            <p><b>Question Two: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer2"]</li>
+            <p>The correct answer was: <b>A</b>, Both opening and closing tags</p>
+            <p><b>Question Three: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer3"]</li>
+            <p>The correct answer was: <b>B</b>, DOCTYPE html</p>
+            <p><b>Question Four: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer4"]</li>
+            <p>The correct answer was: <b>A</b>, html</p>
+             <p><b>Question Five: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer5"]</li>
+            <p>The correct answer was: <b>A</b>, Yes</p><br />
+            
+            <h5><b>Section 2 - Embedded Content</b></h5>
+            <p><b>Question Six:</b> </p>
+            <li>@User.Identity.Name selected @ViewData["Answer6"]</li>
+            <p>The correct answer was: <b>A</b>, Yes</p>        
+            <p><b>Question Seven: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer7"]</li>
+            <p>The correct answer was: <b>B</b>, gif, jpg, png</p> 
+            <p><b>Question Eight: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer8"]</li>
+            <p>The correct answer was: <b>C</b>, img</p>
+            <p><b>Question Nine: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer9"]</li>
+            <p>The correct answer was: <b>B</b>, False</p>
+            <p><b>Question Ten: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer10"]</li>
+            <p>The correct answer was: <b>A</b>, alt tags</p>
+            <p><b>Question Eleven: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer11"]</li>
+            <p>The correct answer was: <b>A</b>, Tells the browser to begin loading the video immediately</p>
+            <p><b>Question Twelve: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer12"]</li>
+            <p>The correct answer was: <b>C</b>, Both</p><br />
+            
+            <h5><b>Section 3 - Navigation</b></h5>
+            <p><b>Question Thirteen: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer13"]</li>
+            <p>The correct answer was: <b>C</b>, Both</p>
+            <p><b>Question Fourteen: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer14"]</li>
+            <p>The correct answer was: <b>C</b>, Both</p>
+            <p><b>Question Fifteen: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer15"]</li>
+            <p>The correct answer was: <b>B</b>, 7</p>
+            <p><b>Question Sixteen: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer16"]</li>
+            <p>The correct answer was: <b>B</b>, 150px</p>
+            <p><b>Question Seventeen: </b></p>
+            <li>@User.Identity.Name selected @ViewData["Answer17"]</li>
+            <p>The correct answer was: <b>A</b>, 5 seconds</p>
+            <br />
+            <br />
+        </div>
+    }
     <p>
         <a href="@Url.Action("Testing", null, new { area = string.Empty, controller = "Teacher" }, Request.Url.Scheme)">
             
