@@ -15,6 +15,12 @@ namespace WebApp.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Teacher()
+        {
+            return View();
+        }
+
         [HttpPost]
         public ActionResult ProcessQuestionaire(string Answer1, string Answer2, string Answer3, string Answer4, string Answer5, string Answer6, string Answer7, string Answer8, string Answer9, string Answer10, string Answer11, string Answer12, string Answer13, string Answer14, string Answer15, string Answer16, string Answer17)
         {

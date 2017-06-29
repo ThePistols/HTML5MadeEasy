@@ -80,5 +80,6 @@ namespace WebApp.Controllers
             ViewBag.teststring = teststring;
             return View("teacher");
         }
+ 
     }
 }
