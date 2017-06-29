@@ -5,33 +5,32 @@
 @if (Request.IsAuthenticated)
 {
     <h1><b>Welcome to the Embedding Content page @User.Identity.Name</b></h1><br />
-    <p>On this page you will learn how to embed images and videos whilst also learning how to control their size and positionnig and for videos how they can be controlled and played.</p>
+    <p>On this page you will learn how to embed images and videos whilst also learning how to control their size and positioning and for videos how they can be controlled and played.</p>
     <br />
     <p><b>Displaying Graphics/Images</b></p>
     <p>
-        In a word-processing program such as Microsoft Word you embed graphics directly into the document. When you distribute a document to others, the graphics are included in the file. <br />
-        In HTML, however, each graphic displayed on a Web page is stored in a seperate file which must reside on the Web server or somewhere the Web server can reach it.
+        In a word-processing program such as Microsoft Word you embed graphics directly into the document. When you distribute a document to others, the graphics are included in that file. <br />
+        In HTML each graphic displayed on a Web page is stored in a seperate file which must reside on the Web server or somewhere the Web server can reach it.
     </p>
     <br />
     <br />
 
     <img src="~/Content/Images/kitten.jpg" style="float:left" width="200" height="200" />
     <p><b>Selecting a Graphics Format</b></p>
-    <p>There are dozens of graphics formats avaliable but most Web browsers only display a few types. The most commonly accepted forms are GIF, PNG and JPG so most Web designers stick to those</p>
-
+    <p>There are dozens of graphics formats avaliable but most Web browsers only display a few types. The most commonly accepted forms are GIF, PNG and JPG so most Web designers tend to stick to those formats.</p>
     <br />
     <br />
 
     <p><b>Preparing Graphics For Web Use</b></p>
     <p>
-        After you get the right format you must decide how large the graphic will be. How many pixels will it contain? This is called the image resolution and it is expressed in width and height, always in that order. <br />
-        A graphics file size - how many bytes the file will take up on the disk - has a direct relationship to its resolution. The more pixels the larger the file. You must find a balance between making it have a high enough <br />
+        How large will the graphic be? How many pixels will it contain? This is called the image resolution and it is expressed in width and height, always in that order. <br />
+        A graphics file size - how many bytes that file will take up on the disk has a direct relationship to its resolution. The more pixels the larger the file. You must find a balance between making it have a high enough <br />
         resolution to display optimally and low enough to download quickly enough when a page is loaded.
         <br />
         There are two ways of controlling the szie of a graphic on a Web Page:
     </p>
     <li>One method is to use a graphics-editing program to resize it before using it on the Web Page. It creates the smallest file possible but prevents anyone visiting your page from downloading a high-quality copy of your graphic</li>
-    <li>The other way is to use the attributes within the HTML code to specify the height and width at which the graphic is displayed. The Web browser will scale the graphic down to the specified size when it displays the page. </li>
+    <li>The other way is to use the attributes within the HTML code to specify the height and width. The Web browser will scale the graphic down to the specified size when it displays the page. </li>
     <br />
     <br />
 
@@ -58,36 +57,37 @@
     <li> &lt;img src = "pic.png" style = "float:left:&gt;  </li>
     <li><b>2.)</b>  Save your Work</li>
     <li><b>3.)</b>  Submit</li>
+    <input type="button" value="Submit Activity 1" />
 
     <br />
     <br />
     <p><b>Arranging Elements on the Page</b></p>
     <p>
-        To move text vertically until the space occupited by the graphic becomes "clear", use the clear style rule. You apply this rule to the text's tag, not the graphics tag. <br />
+        To move the text vertically until the space occupied by the graphic becomes "clear", use the clear style rule. You apply this rule to the texts tag, not the graphics tag. <br />
         For Example: &lt;h2 style = "clear:left"&gt;My Website&lt;/h2&gt;
     </p>
+        <br />
+        <br />
 
-        <br />
-        <br />
+
         <p><b>ACTIVITY 2</b></p>
         <li><b>1.)</b> Add a clear style rule to the &lt;hr&gt; tag near the top </li>
         <li> &lt;hr style = "clear: left" </li>
         <li><b>2.)</b>  Save your Work</li>
         <li><b>3.)</b>  Submit</li>
+        <input type="button" value="Submit Activity 2" />
+        <br />
+        <br />
 
-        <br />
-        <br />
+
         <p><b>Controlling Image Size and Padding</b></p>
         <p>
-            Image size is expressed in pixels. If you want to specify only the width and the height will be resized proportionally or vice versa.
-            but you also have the option to specify both the width and height <br />
-            Like This: &lt;img src = "pic.png" style = "float:left" height = "75" width = "75"&gt;
-        </p>
-        <p>
+            Image size is expressed in pixels. If you want to specify only the width and the height will be resized proportionally or vice versa but you also have the option to specify both the width and height <br />
+            Like This: &lt;img src = "pic.png" style = "float:left" height = "75" width = "75"&gt;<br />
+            <br />
             Like text images/graphics can have margins or padding to seperate them from surrounding elements. To increase the space around a graphic you can insert a right margin specification<br />
             within the style rule. <br />
-            Like This: &lt;img src = "pic.png" style = "float:left; margin-right: 10px" height = "75" width = "75"&gt;
-
+            Like This: &lt;img src = "pic.png" style = "float:left; margin-right: 10px" height = "75" width = "75"&gt;<br />
             Notice that the margin measurement was added to the existing style attribute for the tag, not inserted as a seperate attribute.
         </p>
 
@@ -100,6 +100,7 @@
         <li>&lt;img src = "images/pic.png" style = "float: left; margin: 5px" height="70"&gt;  </li>
         <li><b>3.)</b>  Save your Work</li>
         <li><b>4.)</b>  Submit</li>
+        <input type="button" value="Submit Activity 3" />
 
         <br />
         <br />
@@ -108,12 +109,11 @@
         <p><b>Hyperlinking from Graphics</b></p>
         <p>
             You create a graphical hyperlink by placing an &lt;img&gt; tag in an &lt;a&gt; tag like this:
-            &lt;a href = "http://www.youtube.com" title = "YouTube"&gt; &lt;img src = "images/pic.png" style = "float: left; margin: 5px" height="70"&gt;&lt;/a&gt;
-        </p>
-        <p>
-            The graphic appears as usual in the document but when the user moves the mouse pointer over it, the pointer changes to a hand, indicating that the graphic is a hyperlink.
-            By default, hyperlinked graphics have a border that is the same colour as hyperlinked text. You can remove the border by adding border:none to the style rule for the graphic
-            Like this: &lt;a href = "http://www.youtube.com" title = "YouTube"&gt; &lt;img src = "images/pic.png" style = "float: left; margin: 5px; border:none" height="70"&gt;&lt;/a&gt;
+            &lt;a href = "http://www.youtube.com" title = "YouTube"&gt; &lt;img src = "images/pic.png" style = "float: left; margin: 5px" height="70"&gt;&lt;/a&gt;<br />
+            <br />
+            The graphic appears as usual in the document but when the user moves the mouse pointer over it, the pointer changes to a hand, indicating that the graphic is a hyperlink.<br />
+            By default, hyperlinked graphics have a border that is the same colour as hyperlinked text. You can remove the border by adding border:none to the style rule for the graphic.<br />
+            Like This:  &lt;a href = "http://www.youtube.com" title = "YouTube"&gt; &lt;img src = "images/pic.png" style = "float: left; margin: 5px; border:none" height="70"&gt;&lt;/a&gt;
         </p>
         <br />
         <br />
@@ -126,6 +126,7 @@
         <li>&lt;a href = "http://google.com" title = "Google"&gt;&lt;img src = "images/pic.png" style = "float: left; margin: 5px; border:none" height="70"&gt;  </li>
         <li><b>3.)</b>  Save your Work</li>
         <li><b>4.)</b>  Submit</li>
+        <input type="button" value="Submit Activity 4" />
         <br />
         <br />
 
@@ -133,9 +134,8 @@
         <p><b>Thumbnail Graphics</b></p>
         <p>
             High-resolution graphics can make a page load slowly but avoiding high-res graphics all together can limit your effectiveness. A compromise is to include thumbnail images <br />
-            Thumbnail images are low-resolution copies of the images that are linked to the large version.
-            To create a thumbnial you will need to create smaller versions of each graphic you want to use. This can be done through Photoshop or Paint Shop Pro. <br />
-            Save the smaller version of the image under a different name.
+            which are low-resolution copies of the images that are linked to the large version.<br />
+            To create a thumbnial you will need to create smaller versions of each graphic you want to use. This can be done through Photoshop or Paint Shop Pro and save it under a different name.<br />
             Place the smaller version of the image on your HTML page and then create hyperlinks to the larger files. Set each of the larger files to open in its own window by using the <br />
             target "blank" attribute<br />
             Like This: &lt;a href="pic.png" target = "_blank"&gt;&lt;img src = "small_pic.png"&gt;&lt;/a&gt;
@@ -146,11 +146,10 @@
 
         <p><b>Alternate Text</b></p>
         <p>
-            Placing an alt attribute (traditionally called an alt tag) in an &lt;img&gt; tag create alternate text for the graphic. This is a pop-up box that contains a text explaination of the graphic <br />
+            Placing an alt attribute (traditionally called an alt tag) in an &lt;img&gt; tag creates alternate text for the graphic. This is a pop-up box that contains a text explaination of the graphic <br />
             much like the title does for a hyperlink.
             Alternate text is not just for decoration, it serves an important purpose for users who might not be able to view your graphics for some reason. This might include visually impaired users who <br />
-            are accessing your page through the use of screen-reading programs or people who browse using hand held devices.
-            <br />
+            are accessing your page through the use of screen-reading programs or people who browse using hand held devices.<br />
             Alternate text is simple to include, just place an alt "text" attribute in the &lt;img&gt; tag: <br />
             Like This: &lt;img src = "pic.png" alt="HTML5 Logo"&gt;
         </p>
@@ -159,17 +158,18 @@
 
 
         <p><b>ACTIVITY 5</b></p>
-        <li><b>1.)</b>  Add an alt attribute to the &lt;img&gt; tag</li>
+        <li><b>1.)</b>  Add a alternate attribute to the &lt;img&gt; tag</li>
         <li> &lt;img src = "images/pic.png" style="float:right; padding: 15px" width "75" alt = "HTML5 logo"&gt;</li>
         <li><b>2.)</b>  Save your Work</li>
         <li><b>3.)</b>  Submit</li>
+        <input type="button" value="Submit Activity 5" />
         <br />
         <br />
 
 
         <p><b>KEY POINTS - EMBEDDED GRAPHICS</b></p>
         <li>Valid graphics formats to use on the Web include GIF, PNG and JPG</li>
-        <li>Whenever possible use graphcis that are as close as possible in resolution to the size at which they will be displayed on the Web page. Use a photo-editing program to change the resolution. </li>
+        <li>Whenever possible use graphics that are as close as possible in resolution to the size at which they will be displayed on the Web page. </li>
         <li>Use the &lt;img&gt; tag to insert an image/graphic. The src attribute specifies the image file name</li>
         <li>To refer to a graphic in a subfolder precede the name with with the subfolder name a slash (/)</li>
         <li>To allow a graphic to float to the left or right of the text, use a style "float:left" or style "float:right" attribute in the &lt;img&gt; tag</li>
@@ -208,7 +208,7 @@
             Like This: &lt;video src = "myvideo.mp4" preload&gt;&lt;/video&gt;<br />
             The Loop attribute tells the browser to restart the video immediately when its finished playing.<br />
             Like This: &lt;video src = "myvideo.mp4" loop &gt;&lt;/video&gt;<br />
-            The Autoplay attribute makes the video automatically play when the page is loaded. This is not recommended unless you dont add controls to the video then autoplay is advised.<br />
+            The Autoplay attribute makes the video automatically play when the page is loaded. This is not recommended unless you don't add controls to the video then autoplay is advised.<br />
             Like This: &lt;video src = "myvideo.mp4" autoplay&gt;&lt;/video&gt;<br />
             Putting all of this together a real-world video should eventually look<br />
             Like This: &lt;video src = "myvideo.mp4" width = "320" height = "240" controls&gt;&lt;/video&gt;<br />
@@ -230,7 +230,7 @@
 
         <p><b>The Embed Tag</b></p>
         <p>
-            If the user is using an older browser that doesnt support the &lt;video&gt; tag then it will be ignored so it wont work but it also wont cause problems
+            If the user is using an older browser that doesnt support the &lt;video&gt; tag then it will be ignored so it wont work but it also wont cause problems.<br />
             Most users of Internet Explorer will have Adobe Flash installed. With that you can also include a Flash version fo your video on your page. This can be done with the help of the &lt;embed&gt; tag.
             Adobe Flash can play H.264 encoded video with ACC audio so there should be no need to convert your video to another format.
             Here is an Example:
@@ -270,12 +270,13 @@
         <li>&lt;p&gt;&lt;a href = "myvideo.avi"&gt;Click here&lt;/a&gt; to download a high-resolution version of the clip in AVI format.&lt;/9&gt;</li>
         <li><b>6.)</b>  Save your work</li>
         <li><b>7.)</b>  Submit</li>
+        <input type="button" value="Submit Activity 7" />
         <br />
         <br />
 
 
         <p><b>KEY POINTS - EMBEDDED VIDEO</b></p>
-        <li>Incorperating video is accomplished by providing video and audio files in multiple formats to ensure that your visitors can view the multimedia no matter what browser they are using</li>
+        <li>Incorperating video is accomplished by providing video in multiple formats to ensure that your visitors can view the multimedia no matter what browser they are using</li>
         <li>It's important to understand the different containers and codecs availiable for video and audio and how those are supported across your visitor's browsers</li>
         <li>HTML5 introduces the &lt;video&gt; tag which enable multimedia to be included in Web Pages.</li>
         <li>Older browsers don't support the &lt;embed&gt; tag so it is important to provide video in legacy formats such as Flash to allow all browsers to view the content.</li>
@@ -290,5 +291,6 @@
         <br />
         <footer>
             Copyright &#9400 HTML5 Made Easy
+            Creators: Jamie Hitchens, Regan Thomas, Ben Weake
         </footer>
 }
