@@ -32,7 +32,7 @@ namespace WebApp
                 LoginPath = new PathString("/Account/Login")
             });
 
-            seedDatabase();
+            //seedDatabase();
 
 
         }
