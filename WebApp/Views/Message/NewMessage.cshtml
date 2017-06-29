@@ -16,7 +16,7 @@
 
         @using (Html.BeginForm("Submit", "Message"))
         {
-            <p>From: <input type="text" value="@ViewBag.userdetails[0] <@ViewBag.userdetails[2]>" disabled /></p>
+            <p>From: <input type="text" value="@ViewBag.userdetails[0] @ViewBag.userdetails[2]" disabled /></p>
             <br />
             <p>
                 To: @Html.DropDownList("selecteduser", new SelectList(ViewBag.senduserNAME, ViewBag.senduserID))
@@ -29,7 +29,7 @@
             <p>
                 <textarea name="message" cols="50" rows="10" wrap="hard"></textarea>
                 <br />
-                    <input type="submit" value="Send" />
+                <input type="submit" value="Send" />
             </p>
         }
     </div>
